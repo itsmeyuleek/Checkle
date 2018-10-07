@@ -22,8 +22,14 @@
   </div>
 
   <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <div class="field">
     <%= f.label :topic_id %>
-    <%= f.number_field :topic_id %>
+    <%#= f.number_field :topic_id %>
+    <%= select("card", "topic_id", Topic.all.collect { |t| [t.title, t.id] }, { include_blank: true }) %>
   </div>
 
   <div class="field">

@@ -13,6 +13,7 @@
 <p>
   <strong>Topic:</strong>
   <%= @card.topic_id %>
+  <%#= Topic.find(@card.topic_id).name %>
 </p>
 
 <p>
@@ -24,6 +25,10 @@
   <strong>Memorization level:</strong>
   <%= @card.memorization_level %>
 </p>
+
+<div>
+  <%= image_tag @card.image  %>
+</div>
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
