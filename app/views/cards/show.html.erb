@@ -12,8 +12,8 @@
 
 <p>
   <strong>Topic:</strong>
-  <%= @card.topic_id %>
-  <%#= Topic.find(@card.topic_id).name %>
+  <%#= @card.topic_id %>
+  <%= Topic.find(@card.topic_id).title %>
 </p>
 
 <p>
@@ -29,6 +29,8 @@
 <div>
   <%= image_tag @card.image  %>
 </div>
+
+<hr>
 
 <%= link_to 'Edit', edit_card_path(@card) %> |
 <%= link_to 'Back', cards_path %>
