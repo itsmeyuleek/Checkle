@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @topic.title %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @topic.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
+
+<%= render 'cards/index'  %>
+
+<% @cards.each do |card| %>
+ <%= render 'cards/show, card: card'  %>
+
+<% end %>
+
+<%= render 'cards/form', card: Card.new %>

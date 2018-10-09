@@ -1,0 +1,25 @@
+<p>
+  <strong>Question:</strong>
+  <%= card.question %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= card.answer %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= card.image %>
+</p>
+
+<p>
+  <strong>Memorization level:</strong>
+  <%= card.memorization_level %>
+</p>
+
+<div>
+  <%= image_tag card.image  %>
+</div>
+
+<%= link_to 'Edit', edit_card_path(card) %> |
