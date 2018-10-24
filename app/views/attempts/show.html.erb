@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @attempt.user_id %>
+</p>
+
+<p>
+  <strong>Check:</strong>
+  <%= @attempt.check_id %>
+</p>
+
+<p>
+  <strong>Card:</strong>
+  <%= @attempt.card_id %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @attempt.result %>
+</p>
+
+<%= link_to 'Edit', edit_attempt_path(@attempt) %> |
+<%= link_to 'Back', attempts_path %>
