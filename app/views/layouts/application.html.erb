@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <nav>
+      <div>
+        <%= link_to 'Cards', cards_url %>
+        <%= link_to 'Topics', topics_url %>
+        <%= link_to 'Checks', checks_url %>
+      </div>
+
+      <div>
+       <% if user_signed_in? %>
+       <%= current_user.email %>
+       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+       <% else %>
+       <%= link_to 'Register', new_user_registration_path %>
+       <%= link_to 'Login', new_user_session_path %>
+       <% end %>
+     </div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

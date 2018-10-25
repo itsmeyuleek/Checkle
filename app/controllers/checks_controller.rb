@@ -1,4 +1,5 @@
 class ChecksController < ApplicationController
+  load_and_authorize_resource
   before_action :set_check, only: [:show, :edit, :update, :destroy]
 
   # GET /checks

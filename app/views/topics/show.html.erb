@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<!-- <div style="<%= 'background-color: #' + @gallery.background %>">
+</div> -->
+
 <p>
   <strong>Title:</strong>
   <%= @topic.title %>
@@ -16,8 +19,8 @@
 <%= render 'cards/index'  %>
 
 <% @cards.each do |card| %>
- <%= render 'cards/show, card: card'  %>
+<%= render 'cards/show, card: card'  %>
 
 <% end %>
 
-<%= render 'cards/form', card: Card.new %>
+<%#= render 'cards/form', card: Card.new %>
