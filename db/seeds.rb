@@ -40,6 +40,7 @@ Card.create([
     }
     ])
 
+
     def upload_fake_image
       uploader = ImageUploader.new(Card.new, :image)
       uploader.cache!(User.all.each { |user| user.avatar = File.open(Dir.glob(File.join(Rails.root, 'lib/tasks/cards', '*')).sample); user.save! })
