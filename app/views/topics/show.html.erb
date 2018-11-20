@@ -16,8 +16,8 @@
 <%= render 'cards/index'  %>
 
 <% @cards.each do |card| %>
-<%= render 'cards/show, card: card'  %>
+<%= render 'cards/show', card: card  %>
 
 <% end %>
 
-<%#= render 'cards/form', card: Card.new %>
+<%= render 'cards/form', card: Card.new %>
