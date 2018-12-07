@@ -26,6 +26,7 @@ class CardsController < ApplicationController
   # POST /cards.json
   def create
     @card = Card.new(card_params)
+    # @card = Card.new(add_user_id(card_params))
 
     respond_to do |format|
       if @card.save

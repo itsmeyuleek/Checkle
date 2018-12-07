@@ -43,11 +43,6 @@
     <%= f.number_field :memorization_level %>
   </div>
 
-  <div class="field">
-    <%= f.label :user %>
-    <%#= f.number_field :user_id %>
-    <%= select("card", "user", User.all.collect { |u| [u.id] }, { include_blank: true }) %>
-  </div>
 
   <div class="actions">
     <%= f.submit %>
