@@ -1,29 +1,77 @@
-<p id="notice"><%= notice %></p>
+<%= javascript_include_tag :defaults %>
 
-<h1>Topics</h1>
+<section class="topics">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <div class="zagolovok">
+    <h1>Темы</h2>
+  </div>
 
-  <tbody>
+  <div class="podtem">
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+  </div>
+
+  <div class="tem">
+    <div class="a">
+
+      <form class="new_topic" id="new_topic" action="/topics" accept-charset="UTF-8" method="post">
+          <input name="utf8" type="hidden" value="✓">
+          <input type="hidden" name="authenticity_token" value="KdM8O3y0BWrqOPjP5nBTDVVAZBekQjAjpDSlRu8PLvjUiSxfeQGz1/ccJnm3nBKGqtC0sNaoZ7cLlJEg0ty2TQ==">
+
+          <div class="field">
+            <input type="text" name="topic[title]" id="topic_title" placeholder="Добавьте тему..." autocomplete="off" >
+          </div>
+
+          <!-- <div class="actions">
+            <input type="submit" name="commit" value="Create Topic" data-disable-with="Create Topic">
+          </div> -->
+      </form>
+    </div>
+
     <% @topics.each do |topic| %>
-      <tr>
-        <td><%= topic.title %></td>
-        <td><%= topic.user_id %></td>
-        <td><%= link_to 'Show', topic %></td>
-        <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
-        <td><%= link_to 'Destroy', topic, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="b">
+
+        <div class="redact">
+          <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
+            <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/a23f3d48bf850c231b13b7fd88823411-full.png"/></div>
+          <% end %>
+
+          <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+            <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div>
+          <% end %>
+        </div>
+
+        <%= link_to topic, {:action => 'show', :id => topic.id} do -%>
+          <div class="otkr"><%= topic.title %></div>
+        <% end %>
+
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
-
-<%= link_to 'New Topic', new_topic_path %>
+</section>

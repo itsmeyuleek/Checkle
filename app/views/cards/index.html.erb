@@ -1,35 +1,60 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Cards</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Question</th>
-      <th>Answer</th>
-      <th>Topic</th>
-      <th>Image</th>
-      <th>Memorization level</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<section class="cards">
 
-  <tbody>
+  <div class="zagolovok">
+    <h1>Карточки</h1>
+  </div>
+
+  <div class="podcard">
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+  </div>
+
+
+  <div class="car">
+    <div class="aa">
+      <div class="newcar">Добавьте карточку...</div>
+      <%= link_to new_card_path do -%>
+        <div class="newcar"></div>
+      <% end %>
+    </div>
     <% @cards.each do |card| %>
-      <tr>
-        <td><%= card.question %></td>
-        <td><%= card.answer %></td>
-        <td><%= card.topic_id %></td>
-        <td><%= card.image %></td>
-        <td><%= card.memorization_level %></td>
-        <td><%= link_to 'Show', card %></td>
-        <td><%= link_to 'Edit', edit_card_path(card) %></td>
-        <td><%= link_to 'Destroy', card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="aa">
+        <%= link_to card, {:action => 'show', :id => card.id} do -%>
+          <div class="otkrcard"></div>
+        <% end %>
+
+
+        <div class="quest"><%= card.question %></div>
+        <div class="answ"><%= card.answer %></div>
+
+        <div><%= card.memorization_level %></div>
+
+          <!-- <div class="redactcard">
+            <%= link_to edit_card_path(card), {:action => 'edit', :id => card.id} do -%>
+              <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/a23f3d48bf850c231b13b7fd88823411-full.png"/></div>
+            <% end %>
+
+            <%= link_to card, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+              <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div>
+            <% end %>
+          </div> -->
+      </div>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<br>
-
-<%= link_to 'New Card', new_card_path %>
+</section>

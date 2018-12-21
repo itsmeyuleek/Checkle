@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
-  load_and_authorize_resource
+
+  # load_and_authorize_resource
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
@@ -30,7 +31,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { redirect_to :back  }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new }
@@ -44,7 +45,7 @@ class TopicsController < ApplicationController
   def update
     respond_to do |format|
       if @topic.update(topic_params)
-        format.html { redirect_to @topic, notice: 'Topic was successfully updated.' }
+        format.html { redirect_to @topic }
         format.json { render :show, status: :ok, location: @topic }
       else
         format.html { render :edit }
@@ -58,7 +59,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic.destroy
     respond_to do |format|
-      format.html { redirect_to topics_url, notice: 'Topic was successfully destroyed.' }
+      format.html { redirect_to topics_url}
       format.json { head :no_content }
     end
   end
@@ -71,6 +72,6 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:title, :user_id)
+      params.require(:topic).permit(:title, :user_id )
     end
 end

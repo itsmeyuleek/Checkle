@@ -9,22 +9,53 @@
   </head>
 
   <body>
-    <nav>
-      <div>
-        <%= link_to 'Cards', cards_url %>
-        <%= link_to 'Topics', topics_url %>
-        <%= link_to 'Checks', checks_url %>
-      </div>
+    <!-- <nav class="menubar">
+      <%= link_to 'logo', home_index_url %>
+      <div class="menu">
+        <%= link_to 'Карточки', cards_url %>
+        <%= link_to 'Темы', topics_url %>
+        <%= link_to 'Проверки', checks_url %>
+      </div> -->
 
-      <div>
+    <nav class="menubar">
+      <a class="logo" href="http://localhost:3333/home/index"/> <img src="https://cdn1.savepice.ru/uploads/2018/12/21/e3d4f85de4295fb41db801f69c3569e4-full.png"/> </a>
+      <div class="menu">
+
+        <a class="me" href="http://localhost:3333/topics">
+          <div class="icon"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7dec9c10c411f1efbd011dc4bf1504e4-full.png"/></div>
+          <h2 class="bar">Темы</h2>
+        </a>
+
+        <a class="me" href="http://localhost:3333/cards">
+          <div class="icon"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/bd3eceb3ab1ee1545dba403e21d8ccb8-full.png"/></div>
+          <h2 class="bar">Карточки</h2>
+        </a>
+
+        <a class="me" href="http://localhost:3333/checks">
+          <div class="icon"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/010366f28f4f4e3047ad825ba6bc0d14-full.png"/></div>
+          <h2 class="bar">Проверки</h2>
+        </a>
+
+        <a class="me" href="">
+          <div class="ava"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/68b84ded0ed41d809f22fd64cc2d20e1-full.png"/></div>
+        </a>
+
+
+      <!-- <div>
+       <a href="/users/sign_up">Регистрация</a>
+       <a href="/users/sign_in">Вход</a>
+     </div> -->
+    </nav>
+
+      <!-- <div>
        <% if user_signed_in? %>
        <%= current_user.email %>
-       <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+       <%= link_to 'Выход', destroy_user_session_path, method: :delete %>
        <% else %>
-       <%= link_to 'Register', new_user_registration_path %>
-       <%= link_to 'Login', new_user_session_path %>
+       <%= link_to 'Регистрация', new_user_registration_path %>
+       <%= link_to 'Вход', new_user_session_path %>
        <% end %>
-     </div>
+     </div> -->
     </nav>
 
     <%= yield %>

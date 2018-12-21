@@ -1,25 +1,11 @@
-<p>
-  <strong>Question:</strong>
+<%= link_to card, {:action => 'show', :id => card.id} do -%>
+  <div class="otkrcard"></div>
+<% end %>
+
+<div class="quest">
   <%= card.question %>
-</p>
-
-<p>
-  <strong>Answer:</strong>
-  <%= card.answer %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= card.image %>
-</p>
-
-<p>
-  <strong>Memorization level:</strong>
-  <%= card.memorization_level %>
-</p>
-
-<div>
-  <%= image_tag card.image  %>
 </div>
 
-<%= link_to 'Edit', edit_card_path(card) %> |
+<div class="answ">
+  <%= card.answer %>
+</div>

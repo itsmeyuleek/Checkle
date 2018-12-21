@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  load_and_authorize_resource
+  # load_and_authorize_resource
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   # GET /cards
@@ -30,7 +30,7 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card, notice: 'Card was successfully created.' }
+        format.html { redirect_to @card }
         format.json { render :show, status: :created, location: @card }
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class CardsController < ApplicationController
   def update
     respond_to do |format|
       if @card.update(card_params)
-        format.html { redirect_to @card, notice: 'Card was successfully updated.' }
+        format.html { redirect_to @card }
         format.json { render :show, status: :ok, location: @card }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class CardsController < ApplicationController
   def destroy
     @card.destroy
     respond_to do |format|
-      format.html { redirect_to cards_url, notice: 'Card was successfully destroyed.' }
+      format.html { redirect_to @card }
       format.json { head :no_content }
     end
   end

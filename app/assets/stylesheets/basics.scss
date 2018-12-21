@@ -1,4 +1,61 @@
-nav {
+body {
+background-color: #FBFBFB;
+
+}
+
+.menubar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Montserrat' ;
+  background-color: #FBFBFB;
+}
+
+.menu {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  transition: all .1s ease;
+  margin-left: 10px;
+}
+
+.logo img{
+  margin-top: 5px;
+  height: 30px;
+}
+
+.me {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+  transition: all .1s ease;
+  margin-left: 40px;
+}
+
+.icon img {
+  height: 15px;
+}
+
+.ava img {
+  width: 35px;
+  height: 35px;
+}
+
+.bar {
+  margin-left: 5px;
 }

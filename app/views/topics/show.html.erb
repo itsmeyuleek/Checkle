@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Title:</strong>
@@ -20,4 +20,36 @@
 
 <% end %>
 
-<%= render 'cards/form', card: Card.new %>
+<%= render 'cards/form', card: Card.new %> -->
+
+
+<section class="cardsshow">
+
+  <div class="zagolovok">
+    <%= @topic.title %>
+  </div>
+
+  <!-- <%= link_to 'Edit', edit_topic_path(@topic) %> -->
+  <!-- <%= link_to 'Back', topics_path %> -->
+
+  <div class="car">
+
+    <div class="aa">
+      <div class="newcar">Добавьте карточку...</div>
+      <%= link_to new_card_path do -%>
+        <div class="newcar"></div>
+      <% end %>
+    </div>
+
+    <!-- <div class="aa">
+      <%= render 'cards/form', card: Card.new %>
+    </div> -->
+
+    <% @cards.each do |card| %>
+    <div class="aa">
+      <%= render 'cards/show', card: card  %>
+    </div>
+    <% end %>
+  </div>
+
+</section>

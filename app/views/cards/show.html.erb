@@ -1,6 +1,18 @@
-<p id="notice"><%= notice %></p>
+<section class="showcard">
 
-<p>
+  <div class="topiccard"><%= Topic.find(@card.topic_id).title %></div>
+
+  <div class="one_side">
+    <div class="side_vnutri"><%= @card.question %></div>
+  </div>
+
+  <div class="second_side">
+    <div class="side_vnutri"><%= @card.answer %></div>
+  </div>
+
+</section>
+
+<!-- <p>
   <strong>Question:</strong>
   <%= @card.question %>
 </p>
@@ -24,13 +36,28 @@
 <p>
   <strong>Memorization level:</strong>
   <%= @card.memorization_level %>
-</p>
+</p> -->
 
-<div>
+<!-- <div>
   <%= image_tag @card.image  %>
+</div> -->
+
+<div class="cnop">
+  <div class="cnopcanazad">
+    <div class="strelca">
+      <%= link_to cards_path do -%><img src="https://cdn1.savepice.ru/uploads/2018/12/21/7853ac721a2fe1eeb2c7ee10ea6666f0-full.png"/><% end %>
+    </div>
+    <div class="nazadcard">Назад</div>
+  </div>
+
+  <div class="cnopca">
+    <div class="editcard">Редактировать</div>
+    <%= link_to edit_card_path(@card), {:action => 'edit'} do -%>
+      <div class="editcardcnop"></div>
+    <% end %>
+  </div>
 </div>
 
-<hr>
-
-<%= link_to 'Edit', edit_card_path(@card) %> |
-<%= link_to 'Back', cards_path %>
+<!-- 
+<%= link_to 'Edit', edit_card_path(@card) %>
+<%= link_to 'Back', cards_path %> -->
