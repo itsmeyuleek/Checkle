@@ -1,0 +1,381 @@
+body {
+  font-family:'Montserrat', sans-serif;
+}
+
+.topics {
+  min-width: 1440px;
+  margin-top: 35px;
+}
+
+.zagolovok {
+  font-size: 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-left: 60px;
+  color: #3C3C3C;
+}
+
+.tem {
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 60px;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.a:nth-child(n+8) {
+  display: none;
+}
+
+.cards {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  min-width: 1440px;
+  margin-top: 35px;
+}
+
+.cardss {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  min-width: 1440px;
+  margin-top: 20px;
+}
+
+.cardsshow {
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  min-width: 1440px;
+  margin-top: 35px;
+}
+
+.car {
+  margin-top: 30px;
+  text-align: center;
+  margin-left: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.a {
+  color: #3C3C3C;
+  background-color: white;
+  line-height: 18px;
+  font-size: 12px;
+  width: 154px;
+  height: 154px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+}
+
+.aa {
+  color: #3C3C3C;
+  line-height: 18px;
+  background-color: white;
+  font-size: 12px;
+  width: 232px;
+  height: 154px;
+  margin-right: 40px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.b {
+  color: #3C3C3C;
+  background-color: white;
+  line-height: 18px;
+  font-size: 12px;
+  width: 154px;
+  height: 154px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+}
+
+.pod {
+  margin-top: 30px;
+  margin-left: 254px;
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  margin-top: 34px;
+  z-index: -10;
+}
+
+.podtem {
+  display: flex;
+  position: absolute;
+  justify-content: flex-start;
+  margin-top: 34px;
+  z-index: -10;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  margin-right: 30px;
+  min-width: 1418px;
+}
+
+.podcard {
+  display: flex;
+  position: absolute;
+  margin-top: 56px;
+  z-index: -10;
+  flex-wrap: wrap;
+  margin-left: 60px;
+
+}
+
+.c {
+  background-color: white;
+  width: 154px;
+  height: 154px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.cc {
+  background-color: #F1F1F1;
+  width: 232px;
+  height: 154px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  opacity: 0.6;
+}
+
+.otkr {
+  width: 154px;
+  height: 94px;
+  position: absolute;
+  color: #3C3C3C;
+  padding-top: 35px;
+}
+
+.otkrcard {
+  width: 232px;
+  height: 154px;
+  position: absolute;
+
+}
+
+.redact {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.redactcard {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.editt img{
+  z-index: 1;
+  height: 15px;
+}
+
+.deletee img {
+  margin-left: 10px;
+  z-index: 1;
+  height: 14px;
+}
+
+.quest {
+  font-weight: bold;
+  text-align: left;
+  width: 202px;
+  margin-left: 15px;
+  margin-top: 11px;
+  position: absolute;
+}
+
+.answ {
+  text-align: left;
+  margin-left: 15px;
+  position: absolute;
+  margin-top: 126px;
+}
+
+
+.aa img{
+  width: 232px;
+  height: 154px;
+  -webkit-border-radius: 6px;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-family: 'Montserrat';
+  text-align: center;
+  font-size: 12px;
+  color: #3C3C3C;
+}
+
+.field {
+  margin-top: 65px;
+}
+
+.fieldd {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #3C3C3C;
+  margin-left: 60px;
+}
+
+.newcar {
+  position: absolute;
+  width: 232px;
+  height: 154px;
+  font-family: 'Montserrat';
+  padding-top: 65px;
+  color: #7E7E7E;
+  font-size: 12px;
+}
+
+.showcard{
+  margin-top: 40px;
+  margin-left: 546px;
+
+}
+
+.topiccard{
+  color: #3C3C3C;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+
+.one_side {
+  width: 348px;
+  height: 221px;
+  color: #3C3C3C;
+  line-height: 18px;
+  background-color: white;
+  font-size: 12px;
+  margin-right: 30px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.second_side {
+  width: 348px;
+  height: 221px;
+  color: #3C3C3C;
+  line-height: 18px;
+  background-color: white;
+  font-size: 12px;
+  margin-right: 40px;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.side_vnutri {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #3C3C3C;
+  margin-top: 100px;
+  width: 300px;
+  text-align: center;
+  align-self: center;
+}
+
+.cnopca {
+  margin-left: 116px;
+  height: 34px;
+  width: 116px;
+  background-color: #3C3C3C;
+  border-radius: 5px;
+}
+
+.editcard {
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  padding-top: 11px;
+  padding-left: 11px;
+}
+
+.editcardcnop {
+  z-index: 10;
+  width: 117px;
+  height: 34px;
+}
+
+.nazadcard {
+  position: absolute;
+  font-size: 12px;
+  color: #3C3C3C;
+  margin-top: 3px;
+  margin-left: 15px;
+}
+
+.cnopcanazad {
+  display: flex;
+  flex-direction: row;
+  margin-left: 548px;
+  height: 34px;
+  width: 116px;
+}
+
+.cnop {
+  display: flex;
+
+}
+
+.strelca img {
+  width: 10px;
+  margin-right: 3px;
+}
+
+.strelca {
+  width: 60px;
+  z-index: 10;
+}
+
+.zagolovokk {
+  font-size: 26px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-left: 60px;
+  color: #3C3C3C;
+  margin-top: 35px;
+}
+
+.actions {
+  margin-left: 60px;
+  margin-top: 15px;
+}
+
+.deleteee {
+  margin-top: 15px;
+  margin-left: 60px;
+  font-size: 12px;
+  color: #3C3C3C;
+}
+
+
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/

@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="fieldd">
     <%= f.label :title %>
     <%= f.text_field :title %>
     <%#= select("topic", "title", Topic.all.collect { |t| [t.title, t.id] }, { include_blank: true }) %>
   </div>
 
-  <div class="field">
+  <div class="fieldd">
     <%= f.label :user_id %>
     <%= f.number_field :user_id %>
   </div>
@@ -25,4 +25,9 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+    <div class="deleteee">Удалить тему</div>
+  <% end %>
+
 <% end %>

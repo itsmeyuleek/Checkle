@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="wight=device-wight">
+    <title>Checkle</title>
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <link rel="stylesheet" href="stylesheets/style.css"
+
+  </head>
+
+
+
+  <body>
+
+    <section class="topics">
+
+      <div class="zagolovok">
+        <h1>Темы</h2>
+      </div>
+
+      <div class="pod">
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+      </div>
+
+      <div class="tem">
+        <div class="a">
+          <form class="new_topic" id="new_topic" action="/topics" accept-charset="UTF-8" method="post">
+              <input name="utf8" type="hidden" value="✓">
+              <input type="hidden" name="authenticity_token" value="KdM8O3y0BWrqOPjP5nBTDVVAZBekQjAjpDSlRu8PLvjUiSxfeQGz1/ccJnm3nBKGqtC0sNaoZ7cLlJEg0ty2TQ==">
+
+              <div class="field">
+                <input type="text" name="topic[title]" id="topic_title" placeholder="Добавьте тему..." autocomplete="off" >
+              </div>
+
+              <!-- <div class="actions">
+                <input type="submit" name="commit" value="Create Topic" data-disable-with="Create Topic">
+              </div> -->
+          </form>
+        </div>
+        <% @topics.each do |topic| %>
+          <div class="a">
+
+            <div class="redact">
+              <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
+                <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/41863166e7171859099e6e7175c4343c-full.png"/></div>
+              <% end %>
+
+              <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+                <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/ef002b2b3b001d9cf2550f674cdbe3ec-full.png"/></div>
+              <% end %>
+            </div>
+
+            <%= link_to topic, {:action => 'show', :id => topic.id} do -%>
+              <div class="otkr"><%= topic.title %></div>
+            <% end %>
+
+          </div>
+        <% end %>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="cardss">
+
+      <div class="podcard">
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+        <div class="cc"></div>
+      </div>
+
+      <div class="zagolovok">
+        <h1>Карточки</h1>
+      </div>
+
+      <div class="car">
+        <div class="aa">
+          <div class="newcar">Добавьте карточку...</div>
+          <%= link_to new_card_path do -%>
+            <div class="newcar"></div>
+          <% end %>
+        </div>
+        <% @cards.each do |card| %>
+          <div class="aa">
+
+            <%= link_to card, {:action => 'show', :id => card.id} do -%>
+              <div class="otkrcard"></div>
+            <% end %>
+
+
+            <div class="quest"><%= card.question %></div>
+            <div class="answ"><%= card.answer %></div>
+
+            <div><%= card.memorization_level %></div>
+
+
+              <!-- <div class="redactcard">
+                <%= link_to edit_card_path(card), {:action => 'edit', :id => card.id} do -%>
+                  <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/a23f3d48bf850c231b13b7fd88823411-full.png"/></div>
+                <% end %>
+
+                <%= link_to card, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+                  <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div>
+                <% end %>
+              </div> -->
+          </div>
+        <% end %>
+      </div>
+
+    </section>
+
+
+  </body>
+</html>
