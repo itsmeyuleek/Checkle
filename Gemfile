@@ -40,6 +40,7 @@ gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'cancancan', '~> 2.0'
 gem 'compass-rails', github: 'Compass/compass-rails'
+gem 'webpacker', '~> 3.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
