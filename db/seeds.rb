@@ -10,7 +10,7 @@ Card.create([
   {
     question: 'Кто такой Робер Дуано?',
     answer: 'Французский фотограф, мастер гуманистической французской фотографии',
-    image: upload_fake_image
+    # image: upload_fake_image
   }, {
     question: 'Bonjour',
     answer: 'Здравствуйте, добрый день'
@@ -20,7 +20,7 @@ Card.create([
   }, {
     question: 'Кто основал творческое объединение "Синий всадник?"',
     answer: 'Василий Кандинский и Франц Марк',
-    image: upload_fake_image
+    # image: upload_fake_image
   }, {
     question: 'Skill',
     answer: 'Навык, умение, мастерство'
@@ -41,8 +41,8 @@ Card.create([
     ])
 
 
-    def upload_fake_image
-      uploader = ImageUploader.new(Card.new, :image)
-      uploader.cache!(User.all.each { |user| user.avatar = File.open(Dir.glob(File.join(Rails.root, 'lib/tasks/cards', '*')).sample); user.save! })
-      uploader
-    end
+    # def upload_fake_image
+    #   uploader = ImageUploader.new(Card.new, :image)
+    #   uploader.cache!(User.all.each { |user| user.avatar = File.open(Dir.glob(File.join(Rails.root, 'lib/tasks/cards', '*')).sample); user.save! })
+    #   uploader
+    # end

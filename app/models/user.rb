@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :cards, through: :topics
-  # has_many :attempts, through: :checks
+  has_many :attempts, through: :checks
 end
