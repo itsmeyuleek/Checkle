@@ -1,5 +1,6 @@
 class CardsController < ApplicationController
-  # load_and_authorize_resource
+
+  load_and_authorize_resource
   before_action :set_card, only: [:show, :edit, :update, :destroy]
 
   # GET /cards
@@ -26,6 +27,7 @@ class CardsController < ApplicationController
   # POST /cards.json
   def create
     @card = Card.new(card_params)
+    @card.user_id = current_user.id
     # @card = Card.new(add_user_id(card_params))
 
     respond_to do |format|

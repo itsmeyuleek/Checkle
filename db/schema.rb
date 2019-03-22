@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181025203116) do
+ActiveRecord::Schema.define(version: 20190210183854) do
 
   create_table "attempts", force: :cascade do |t|
     t.integer  "user_id"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20181025203116) do
     t.integer  "memorization_level"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+    t.integer  "user_id"
   end
 
   create_table "checks", force: :cascade do |t|

@@ -11,6 +11,10 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+f3_development
+/db/project_test
+/db/project_production
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -23,3 +27,9 @@
 public/uploads
 public/assets
 .DS_Store
+/public/packs
+/public/packs-test
+/node_modules
+/node_modules_bak
+yarn-debug.log*
+.yarn-integrity
