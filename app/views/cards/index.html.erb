@@ -4,9 +4,11 @@
 
   <div class="zagolovok">
     <h1>Карточки</h1>
+    <a href="http://localhost:3333/cards/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
   </div>
 
   <div class="podcard">
+    <div class="cc"></div>
     <div class="cc"></div>
     <div class="cc"></div>
     <div class="cc"></div>
@@ -26,18 +28,23 @@
 
 
   <div class="car">
-    <div class="aa">
+    <!-- <div class="aa">
       <div class="newcar">Добавьте карточку...</div>
       <%= link_to new_card_path do -%>
         <div class="newcar"></div>
       <% end %>
-    </div>
+    </div> -->
     <% @cards.each do |card| %>
-      <div class="aa">
+      <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
+
         <%= link_to card, {:action => 'show', :id => card.id} do -%>
           <div class="otkrcard"></div>
         <% end %>
 
+
+        <div class="zatemnenie"></div>
+
+        <div class="imageniz"><%= image_tag card.image %></div>
 
         <div class="quest"><%= card.question %></div>
         <div class="answ"><%= card.answer %></div>

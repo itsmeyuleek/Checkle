@@ -3,21 +3,42 @@
 
   <div class="zagolovok">
     <%= @topic.title %>
+    <a href="http://localhost:3333/cards/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
+  </div>
+
+  <div class="podcard">
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
+    <div class="cc"></div>
   </div>
 
   <div class="car">
 
-    <div class="aa">
+    <!-- <div class="aa">
       <div class="newcar">Добавьте карточку...</div>
       <%= link_to new_card_path do -%>
         <div class="newcar"></div>
       <% end %>
-    </div>
+    </div> -->
 
     <% @cards.each do |card| %>
-    <div class="aa">
-      <%= render 'cards/show', card: card  %>
-    </div>
+      <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
+          <div class="zatemnenie"></div>
+          <%= render 'cards/show', card: card  %>
+      </div>
     <% end %>
   </div>
 

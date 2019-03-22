@@ -10,29 +10,40 @@
 
     <link rel="stylesheet" href="stylesheets/style.css"
 
-  </head>
+    <script src="javascripts/popup.js"></script>
 
+  </head>
 
 
   <body>
 
+    <!-- <div class="wrapper">
+      <a class="pop-up-button">Click</a>
+      <div class="pop-up">
+        <div class="pop-up-text">
+          <h1>Title</h1>
+          <p>some pop-up text</p>
+          <a href="#">Link</a>
+        </div>
+      </div>
+    </div> -->
+
+
     <section class="topics">
 
       <div class="zagolovok">
-        <h1>Темы</h2>
+        <h1>Темы</h1>
+        <a href="http://localhost:3333/topics/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
       </div>
 
-      <div class="pod">
+      <!-- <div class="pod">
         <div class="c"></div>
         <div class="c"></div>
         <div class="c"></div>
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c"></div>
-      </div>
+      </div> -->
 
       <div class="tem">
-        <div class="a">
+        <!-- <div class="a">
           <form class="new_topic" id="new_topic" action="/topics" accept-charset="UTF-8" method="post">
               <input name="utf8" type="hidden" value="✓">
               <input type="hidden" name="authenticity_token" value="KdM8O3y0BWrqOPjP5nBTDVVAZBekQjAjpDSlRu8PLvjUiSxfeQGz1/ccJnm3nBKGqtC0sNaoZ7cLlJEg0ty2TQ==">
@@ -41,11 +52,11 @@
                 <input type="text" name="topic[title]" id="topic_title" placeholder="Добавьте тему..." autocomplete="off" >
               </div>
 
-              <!-- <div class="actions">
+              <div class="actions">
                 <input type="submit" name="commit" value="Create Topic" data-disable-with="Create Topic">
-              </div> -->
+              </div>
           </form>
-        </div>
+        </div> -->
         <% @topics.each do |topic| %>
           <div class="a">
 
@@ -68,6 +79,14 @@
 
       </div>
 
+      <div class="bolse">
+        <a href="http://localhost:3333/topics">
+          <div>Показать больше</div>
+          <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+        </a>
+      </div>
+
+
     </section>
 
 
@@ -87,31 +106,38 @@
         <div class="cc"></div>
         <div class="cc"></div>
         <div class="cc"></div>
-        <div class="cc"></div>
-        <div class="cc"></div>
-        <div class="cc"></div>
       </div>
+
 
       <div class="zagolovok">
         <h1>Карточки</h1>
+        <a href="http://localhost:3333/cards/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
       </div>
 
       <div class="car">
-        <div class="aa">
+        <!-- <div class="aa">
           <div class="newcar">Добавьте карточку...</div>
           <%= link_to new_card_path do -%>
             <div class="newcar"></div>
           <% end %>
-        </div>
+        </div> -->
         <% @cards.each do |card| %>
-          <div class="aa">
+          <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
 
-            <%= link_to card, {:action => 'show', :id => card.id} do -%>
+            <!-- <%= link_to card, {:action => 'show', :id => card.id} do -%>
+              <div class="otkrcard"></div>
+            <% end %> -->
+
+            <%= link_to card, remote: true do %>
               <div class="otkrcard"></div>
             <% end %>
 
+            <div class="zatemnenie"></div>
+            
+            <div class="imageniz"><%= image_tag card.image %></div>
 
             <div class="quest"><%= card.question %></div>
+
             <div class="answ"><%= card.answer %></div>
 
             <div><%= card.memorization_level %></div>
@@ -126,8 +152,17 @@
                   <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div>
                 <% end %>
               </div> -->
+
+
           </div>
         <% end %>
+      </div>
+
+      <div class="bolsee">
+        <a href="http://localhost:3333/cards">
+          <div>Показать больше</div>
+          <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+        </a>
       </div>
 
     </section>

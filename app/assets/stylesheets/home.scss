@@ -1,5 +1,5 @@
 body {
-  font-family:'Montserrat', sans-serif;
+  font-family:'Helvetica Neue', sans-serif;
 }
 
 .topics {
@@ -9,26 +9,82 @@ body {
 
 .zagolovok {
   font-size: 26px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  margin-left: 60px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 600;
+  margin-left: 190px;
   color: #3C3C3C;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.zagolovok a{
+  margin-right: 210px;
+}
+
+.zagolovok img{
+  width: 55px;
+}
+
+
 .tem {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
-  margin-left: 60px;
+  margin-left: 190px;
   flex-wrap: wrap;
   display: flex;
+  width: 1110px;
+
 }
 
 .a:nth-child(n+8) {
   display: none;
 }
 
+.bolse {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 210px;
+  opacity: 0.6;
+  font-size: 13px;
+}
+
+.bolse img {
+  transform: scale(-1, 1);
+  width: 9px;
+  margin-left: 7px;
+}
+
+.bolse a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
+.bolsee {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 210px;
+  opacity: 0.6;
+  margin-top: 190px;
+  margin-bottom: 25px;
+  font-size: 13px;
+}
+
+.bolsee img {
+  transform: scale(-1, 1);
+  width: 9px;
+  margin-left: 7px;
+}
+
+.bolsee a {
+  display: flex;
+  text-decoration: none;
+  color: black;
+}
+
 .cards {
-  font-family: 'Montserrat';
+  font-family: 'Helvetica Neue';
   display: flex;
   flex-direction: column;
   min-width: 1440px;
@@ -36,15 +92,15 @@ body {
 }
 
 .cardss {
-  font-family: 'Montserrat';
-  display: flex;
-  flex-direction: column;
+  font-family: 'Helvetica Neue';
+  // display: flex;
+  // flex-direction: column;
   min-width: 1440px;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .cardsshow {
-  font-family: 'Montserrat';
+  font-family: 'Helvetica Neue';
   display: flex;
   flex-direction: column;
   min-width: 1440px;
@@ -52,62 +108,98 @@ body {
 }
 
 .car {
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
-  margin-left: 60px;
+  margin-left: 190px;
   display: flex;
   flex-wrap: wrap;
+  width: 1090px;
 }
 
 .a {
   color: #3C3C3C;
   background-color: white;
   line-height: 18px;
-  font-size: 12px;
-  width: 154px;
-  height: 154px;
-  margin-right: 40px;
-  margin-bottom: 40px;
+  width: 326px;
+  height: 190px;
+  margin-right: 30px;
+  margin-bottom: 25px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
   border-radius: 5px;
+
+}
+
+.a:nth-child(n+4) {
+  display: none;
 }
 
 .aa {
-  color: #3C3C3C;
+  color: white;
   line-height: 18px;
   background-color: white;
-  font-size: 12px;
-  width: 232px;
-  height: 154px;
-  margin-right: 40px;
+  font-size: 14px;
+  width: 245px;
+  height: 165px;
+  margin-right: 20px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.withImage img{
+  width: 245px;
+  height: 165px;
+  -webkit-border-radius: 6px;
+}
+
+.withImage {
+  .zatemnenie{
+    background-color: rgba(0,0,0,0.5);
+    width: 245px;
+    height: 165px;
+    -webkit-border-radius: 6px;
+    position: absolute;
+  }
+}
+
+.withoutImage{
+  color: black;
+}
+
+.podlozka {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: rgba(0,0,0,0.5);
+  width: 245px;
+  height: 165px;
+  border-radius: 5px;
 }
 
 .b {
   color: #3C3C3C;
   background-color: white;
   line-height: 18px;
-  font-size: 12px;
-  width: 154px;
-  height: 154px;
-  margin-right: 40px;
+  width: 326px;
+  height: 190px;
+  margin-right: 30px;
   margin-bottom: 40px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
   border-radius: 5px;
 }
 
 .pod {
-  margin-top: 30px;
-  margin-left: 254px;
   display: flex;
   position: absolute;
   justify-content: flex-start;
-  margin-top: 34px;
   z-index: -10;
+  margin-top: 30px;
+  margin-left: 190px;
+  flex-wrap: wrap;
+  width: 1110px;
 }
 
 .podtem {
@@ -123,20 +215,21 @@ body {
 }
 
 .podcard {
-  display: flex;
+  margin-top: 69px;
   position: absolute;
-  margin-top: 56px;
   z-index: -10;
+  margin-left: 190px;
+  display: flex;
   flex-wrap: wrap;
-  margin-left: 60px;
+  width: 1090px;
 
 }
 
 .c {
   background-color: white;
-  width: 154px;
-  height: 154px;
-  margin-right: 40px;
+  width: 326px;
+  height: 190px;
+  margin-right: 30px;
   margin-bottom: 40px;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
   border-radius: 5px;
@@ -144,28 +237,37 @@ body {
 }
 
 .cc {
-  background-color: #F1F1F1;
-  width: 232px;
-  height: 154px;
-  margin-right: 40px;
-  margin-bottom: 40px;
+  // background-color: #F1F1F1;
+  background-color: white;
+  width: 245px;
+  height: 165px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 5px;
-  opacity: 0.6;
+  // opacity: 0.6;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.01)
 }
 
 .otkr {
-  width: 154px;
-  height: 94px;
+  width: 266px;
+  height: 104px;
   position: absolute;
   color: #3C3C3C;
-  padding-top: 35px;
+  padding-top: 15px;
+  margin-left: 30px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .otkrcard {
-  width: 232px;
-  height: 154px;
+  width: 245px;
+  height: 165px;
   position: absolute;
-
+  z-index: 100;
 }
 
 .redact {
@@ -194,27 +296,26 @@ body {
 }
 
 .quest {
-  font-weight: bold;
+  font-size: 15px;
+  font-weight: 600;
   text-align: left;
   width: 202px;
-  margin-left: 15px;
-  margin-top: 11px;
+  margin-left: 18px;
+  margin-top: 16px;
   position: absolute;
 }
 
 .answ {
+  font-size: 13px;
   text-align: left;
-  margin-left: 15px;
+  margin-left: 18px;
   position: absolute;
-  margin-top: 126px;
+  margin-top: 130px;
+  width: 202px;
+  bottom: 0;
+  margin-bottom: 16px;
 }
 
-
-.aa img{
-  width: 232px;
-  height: 154px;
-  -webkit-border-radius: 6px;
-}
 
 input {
   outline: none;
@@ -256,7 +357,7 @@ input {
   color: #3C3C3C;
   font-weight: bold;
   font-size: 20px;
-
+  margin-top: 30px;
 }
 
 .one_side {
@@ -273,7 +374,19 @@ input {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+}
 
+.image_vnutri{
+  height: 160px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0,0,0,.4);
+}
+
+.image_vnutri img {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
 }
 
 .second_side {
@@ -295,6 +408,16 @@ input {
   font-family: 'Montserrat';
   font-size: 14px;
   color: #3C3C3C;
+  margin-top: 20px;
+  width: 300px;
+  text-align: center;
+  align-self: center;
+}
+
+.side_vnutriniz {
+  font-family: 'Montserrat';
+  font-size: 14px;
+  color: #3C3C3C;
   margin-top: 100px;
   width: 300px;
   text-align: center;
@@ -302,7 +425,7 @@ input {
 }
 
 .cnopca {
-  margin-left: 116px;
+  margin-left: 305px;
   height: 34px;
   width: 116px;
   background-color: #3C3C3C;
@@ -311,7 +434,7 @@ input {
 
 .editcard {
   position: absolute;
-  font-size: 12px;
+  font-size: 13px;
   color: white;
   padding-top: 11px;
   padding-left: 11px;
@@ -325,18 +448,19 @@ input {
 
 .nazadcard {
   position: absolute;
-  font-size: 12px;
+  font-size: 13px;
   color: #3C3C3C;
-  margin-top: 3px;
+  margin-top: 1px;
   margin-left: 15px;
 }
 
 .cnopcanazad {
   display: flex;
-  flex-direction: row;
-  margin-left: 548px;
-  height: 34px;
-  width: 116px;
+  // flex-direction: row;
+  // height: 34px;
+  // width: 116px;
+  width: 60px;
+  width: 20px;
 }
 
 .cnop {
@@ -345,8 +469,8 @@ input {
 }
 
 .strelca img {
-  width: 10px;
-  margin-right: 3px;
+  width: 9px;
+  // margin-right: 7px;
 }
 
 .strelca {
@@ -374,6 +498,46 @@ input {
   font-size: 12px;
   color: #3C3C3C;
 }
+
+body.popup {
+  overflow: hidden;
+}
+
+.close img {
+  width: 30px;
+  height: 30px;
+}
+
+.close {
+  position: absolute;
+  margin-left: 372px;
+  margin-top: -4px;
+}
+
+.fader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    background-color: white;
+    width: 500px;
+    height: 642px;
+    border-radius: 5px;
+    .showcard {
+      margin: 0;
+      width: 348px;
+      margin-left: 72px;
+    }
+  }
+}
+
 
 
 // Place all the styles related to the home controller here.
