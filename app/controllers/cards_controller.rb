@@ -32,10 +32,10 @@ class CardsController < ApplicationController
 
     respond_to do |format|
       if @card.save
-        format.html { redirect_to @card }
+        format.html { redirect_to cards_url }
         format.json { render :show, status: :created, location: @card }
       else
-        format.html { render :new }
+        format.html { }
         format.json { render json: @card.errors, status: :unprocessable_entity }
       end
     end
@@ -46,7 +46,7 @@ class CardsController < ApplicationController
   def update
     respond_to do |format|
       if @card.update(card_params)
-        format.html { redirect_to @card }
+        format.html { redirect_to cards_url }
         format.json { render :show, status: :ok, location: @card }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class CardsController < ApplicationController
   def destroy
     @card.destroy
     respond_to do |format|
-      format.html { redirect_to @card }
+      format.html { redirect_to cards_url }
       format.json { head :no_content }
     end
   end

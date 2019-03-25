@@ -4,38 +4,10 @@
 
   <div class="zagolovok">
     <h1>Темы</h2>
-    <a href="http://localhost:3333/topics/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
+    <%= link_to new_topic_path, remote: true do %>
+      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+    <% end %>
   </div>
-
-  <!-- <div class="podtem">
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-    <div class="c"></div>
-  </div> -->
 
   <div class="tem">
     <!-- <div class="a">
@@ -73,6 +45,18 @@
 
       </div>
     <% end %>
+  </div>
+
+  <div class="podtem">
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
+    <div class="c"></div>
   </div>
 
 </section>

@@ -1,7 +1,7 @@
 <section class="fader">
   <section class="wrapper">
     <div class="shownew">
-      <div class="zagolovokk">Новая карточка
+      <div class="zagolovokk">Редактирование
         <div class="close">
           <img src="https://i.ibb.co/N6bD89n/krest.png"/>
         </div>
@@ -23,35 +23,25 @@
         <% if @topic %>
         <%= f.hidden_field :topic_id, value: @topic.id %>
         <% else %>
-        <div class="fieldd">
+        <div class="vibortemi">
           <!-- <%= f.label :topic_id %> -->
           <%#= f.number_field :topic_id %>
-          <%= select("card", "topic_id", Topic.all.collect { |t| [t.title, t.id] }, {:include_blank => 'Выберите тему'}) %>
+          <%= select("card", "topic_id", Topic.all.collect { |t| [t.title, t.id] }, {:include_blank => 'Some text here'}) %>
         </div>
 
         <% end %>
 
-        <div class="one_side">
-          <!-- <%= f.label :question %> -->
-          <%= f.text_field :question, placeholder: "Добавьте вопрос..." %>
-        </div>
-
-        <!-- <div class="fieldd">
+        <div class="vopros">
           <%= f.label :question %>
-          <%= f.text_field :question, placeholder: "Добавьте вопрос..." %>
-        </div> -->
-
-        <div class="second_side">
-          <!-- <%= f.label :answer %> -->
-          <%= f.text_field :answer, placeholder: "Добавьте ответ..." %>
+          <%= f.text_field :question %>
         </div>
 
-        <!-- <div class="fieldd">
+        <div class="otvet">
           <%= f.label :answer %>
-          <%= f.text_field :answer, placeholder: "Добавьте ответ..." %>
-        </div> -->
+          <%= f.text_field :answer %>
+        </div>
 
-        <div class="fieldd">
+        <div class="viborimage">
           <%= f.label :image %>
           <%= f.file_field :image %>
         </div>
@@ -65,9 +55,9 @@
           <%= f.submit %>
         </div>
 
-        <!-- <%= link_to card, method: :delete, data: { confirm: 'Are you sure?' } do -%>
+        <%= link_to card, method: :delete, data: { confirm: 'Are you sure?' } do -%>
           <div class="deleteee">Удалить карточку</div>
-        <% end %> -->
+        <% end %>
 
       <% end %>
 
