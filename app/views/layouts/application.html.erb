@@ -20,24 +20,32 @@
 
     <nav class="menubar">
 
+      <%= link_to home_index_path do -%>
+        <div class="logo"><img src="https://i.ibb.co/Q6DFqPx/05.png"/></div>
+      <% end %>
 
-      <a class="logo" href="http://localhost:3000/home/index"/> <img src="https://i.ibb.co/Q6DFqPx/05.png"/> </a>
       <div class="menu">
 
-        <a class="me" href="http://localhost:3000/topics">
-          <div class="icon"><img src="https://i.ibb.co/XjjBkrL/01.png"/></div>
-          <h2 class="bar">Темы</h2>
-        </a>
+        <%= link_to topics_path, :class => "reg" do -%>
+          <div class="me">
+            <div class="icon"><img src="https://i.ibb.co/XjjBkrL/01.png"/></div>
+            <h2 class="bar">Темы</h2>
+          </div>
+        <% end %>
 
-        <a class="me" href="http://localhost:3000/cards">
-          <div class="icon"><img src="https://i.ibb.co/QDhDRx1/02.png"/></div>
-          <h2 class="bar">Карточки</h2>
-        </a>
+        <%= link_to cards_path, :class => "reg" do -%>
+          <div class="me">
+            <div class="icon"><img src="https://i.ibb.co/QDhDRx1/02.png"/></div>
+            <h2 class="bar">Карточки</h2>
+          </div>
+        <% end %>
 
-        <a class="me" href="http://localhost:3000/checks">
-          <div class="icon"><img src="https://i.ibb.co/6mHJT0y/03.png"/></div>
-          <h2 class="bar">Проверки</h2>
-        </a>
+        <%= link_to checks_path, :class => "reg" do -%>
+          <div class="me">
+            <div class="icon"><img src="https://i.ibb.co/6mHJT0y/03.png"/></div>
+            <h2 class="bar">Проверки</h2>
+          </div>
+        <% end %>
 
         <!-- <a class="me" href="">
           <div class="ava"><img src="https://i.ibb.co/VqVjFcB/04.png"/></div>
