@@ -4,7 +4,9 @@
 
   <div class="zagolovok">
     <h1>Карточки</h1>
-    <a href="http://localhost:3000/cards/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
+    <%= link_to new_card_path, remote: true do %>
+      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+    <% end %>
   </div>
 
   <div class="podcard">
@@ -37,7 +39,7 @@
     <% @cards.each do |card| %>
       <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
 
-        <%= link_to card, {:action => 'show', :id => card.id} do -%>
+        <%= link_to card, remote: true do %>
           <div class="otkrcard"></div>
         <% end %>
 

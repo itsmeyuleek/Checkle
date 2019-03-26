@@ -31,7 +31,7 @@ class TopicsController < ApplicationController
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to :back  }
+        format.html { redirect_to :back }
         format.json { render :show, status: :created, location: @topic }
       else
         format.html { render :new }

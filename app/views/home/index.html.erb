@@ -33,14 +33,10 @@
 
       <div class="zagolovok">
         <h1>Темы</h1>
-        <%= link_to image_tag("plus.png"), new_topic_path %>
+        <%= link_to new_topic_path, remote: true do %>
+          <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+        <% end %>
       </div>
-
-      <!-- <div class="pod">
-        <div class="c"></div>
-        <div class="c"></div>
-        <div class="c"></div>
-      </div> -->
 
       <div class="tem">
         <!-- <div class="a">
@@ -62,11 +58,11 @@
 
             <div class="redact">
               <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
-                <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/41863166e7171859099e6e7175c4343c-full.png"/></div>
+                <%# <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/41863166e7171859099e6e7175c4343c-full.png"/></div> %>
               <% end %>
 
               <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
-                <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/ef002b2b3b001d9cf2550f674cdbe3ec-full.png"/></div>
+                <%# <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/ef002b2b3b001d9cf2550f674cdbe3ec-full.png"/></div> %>
               <% end %>
             </div>
 
@@ -79,12 +75,20 @@
 
       </div>
 
-      <div class="bolse">
-        <a href="http://localhost:3000/topics">
-          <div>Показать больше</div>
-          <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
-        </a>
+      <div class="pod">
+        <div class="c"></div>
+        <div class="c"></div>
+        <div class="c"></div>
+
+        <div class="bolse">
+          <a href="http://localhost:3000/topics">
+            <div>Показать больше</div>
+            <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+          </a>
+        </div>
+
       </div>
+
 
 
     </section>
@@ -106,12 +110,23 @@
         <div class="cc"></div>
         <div class="cc"></div>
         <div class="cc"></div>
+
+        <div class="bolsee">
+          <a href="http://localhost:3000/cards">
+            <div>Показать больше</div>
+            <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+          </a>
+        </div>
+
       </div>
+
 
 
       <div class="zagolovok">
         <h1>Карточки</h1>
-        <%= link_to image_tag("plus.png"), new_card_path %>
+        <%= link_to new_card_path, remote: true do %>
+          <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+        <% end %>
       </div>
 
       <div class="car">
@@ -160,7 +175,7 @@
 
       <div class="bolsee">
         <a href="http://localhost:3000/cards">
-          <div>Показать больше</div>
+          <%# <div>Показать больше</div> %>
           <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
         </a>
       </div>

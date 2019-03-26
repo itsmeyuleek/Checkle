@@ -3,7 +3,9 @@
 
   <div class="zagolovok">
     <%= @topic.title %>
-    <a href="http://localhost:3000/cards/new"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a>
+    <%= link_to new_card_path, remote: true do %>
+      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+    <% end %>
   </div>
 
   <div class="podcard">
@@ -36,8 +38,20 @@
 
     <% @cards.each do |card| %>
       <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
-          <div class="zatemnenie"></div>
-          <%= render 'cards/show', card: card  %>
+        <%= link_to card, remote: true do %>
+          <div class="otkrcard"></div>
+        <% end %>
+
+
+        <div class="zatemnenie"></div>
+
+        <div class="imageniz"><%= image_tag card.image %></div>
+
+        <div class="quest"><%= card.question %></div>
+        <div class="answ"><%= card.answer %></div>
+
+        <div><%= card.memorization_level %></div>
+
       </div>
     <% end %>
   </div>
