@@ -28,13 +28,15 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
     @topic = Topic.new(topic_params)
+    @topic.user_id = current_user.id
+    # @card = Card.new(add_user_id(card_params))
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to :back }
+        format.html { redirect_to topics_url }
         format.json { render :show, status: :created, location: @topic }
       else
-        format.html { render :new }
+        format.html { }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end

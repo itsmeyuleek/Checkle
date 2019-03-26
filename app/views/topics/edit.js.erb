@@ -1,0 +1,6 @@
+$('body').append('<%= j render partial: "topics/edit", topic: @topic %>')
+$('body').addClass('popup')
+$('.close').on('click', function() {
+  $('body').removeClass('popup')
+  $('.fader').remove()
+})

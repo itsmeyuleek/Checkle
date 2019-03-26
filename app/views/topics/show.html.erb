@@ -2,7 +2,13 @@
 <section class="cardsshow">
 
   <div class="zagolovok">
-    <%= @topic.title %>
+    <div class="redzag">
+      <%= @topic.title %>      
+      <%= link_to edit_topic_path, remote: true do -%>
+      <div class="redtem"><img src="https://i.ibb.co/By70DBP/edit-icon-icons-com-61193.png"/></a></div>
+      <% end %>
+    </div>
+
     <%= link_to new_card_path, remote: true do %>
       <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
     <% end %>
