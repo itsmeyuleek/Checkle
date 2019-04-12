@@ -1,8 +1,10 @@
 class HomeController < ApplicationController
+  load_and_authorize_resource
+  # before_action :authenticate_user!
 
   def index
-    @topics = Topic.all
-    @cards = Card.all
+    @topics = current_user.topics
+    @cards = current_user.cards
     @card = Card.first
   end
 

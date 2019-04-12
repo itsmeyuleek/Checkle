@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users
+
+  get 'welcome/index'
   get 'home/index'
 
-  devise_for :users
   resources :checks
   resources :users
   resources :attempts

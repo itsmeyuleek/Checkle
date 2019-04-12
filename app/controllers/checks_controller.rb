@@ -6,7 +6,7 @@ class ChecksController < ApplicationController
   # GET /checks
   # GET /checks.json
   def index
-    @checks = Check.all
+    @checks = current_user.checks
   end
 
   # GET /checks/1
