@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   $('.pop-up-button').click(function () {
     $('.wrapper').toggleClass('show');
   });

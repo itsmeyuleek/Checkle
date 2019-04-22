@@ -1,0 +1,6 @@
+$('body').append('<%= j render partial: "devise/sessions/new", devise: @devise %>')
+$('body').addClass('popup')
+$('.close').on('click', function() {
+  $('body').removeClass('popup')
+  $('.fader').remove()
+})

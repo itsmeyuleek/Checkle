@@ -1,9 +1,8 @@
 <section class="fader">
+  <div class="close"><img src="https://i.ibb.co/N6bD89n/krest.png"/></div>
   <section class="wrapper">
 
     <section class="showcard <%= 'withImage' if @card.image.try(:url) %><%= 'withoutImage' unless @card.image.try(:url) %>">
-
-      <div class="close"><img src="https://i.ibb.co/N6bD89n/krest.png"/></div>
       <!-- <img class="krest" src="images/krest.svg" > -->
 
       <div class="topiccard"><%= Topic.find(@card.topic_id).title %></div>

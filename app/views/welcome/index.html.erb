@@ -1,2 +1,152 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="glavnaya-verh-welcome">
+  <div class="opisanieproecta">
+    <h1>Метод запоминания с помощью <br> флэш–карточек</h1>
+    <h2>Мы лучше запоминаем информацию, если обращаемся <br> к ней несколько раз в течении длительного времени, <br> причем между повторениями необходимы интервалы. </h2>
+  </div>
+
+</div>
+
+<div class="glavnaya-image-welcome">
+  <%= image_tag ("glav.jpg") %>
+</div>
+
+<section class="topics-welcome">
+
+  <div class="zagolovok-welcome">
+    <h1>Добавьте себе готовые наборы с карточками</h1>
+    <!-- <%= link_to new_topic_path, remote: true do %>
+      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+    <% end %> -->
+  </div>
+
+  <div class="podzagolovok-welcome">
+    <h2>Мы собрали для вас готовые наборы карточек по разным темам, <br> вы можете просто добавить их в свой профиль.</h2>
+  </div>
+
+  <div class="image-welcome">
+    <div class="image-welcome-paz">
+      <%= image_tag ("istross.jpg") %>
+    </div>
+
+    <div class="image-welcome-paz">
+      <%= image_tag ("angl.jpg") %>
+    </div>
+
+    <div class="image-welcome-paz">
+      <%= image_tag ("isk.jpg") %>
+    </div>
+  </div>
+
+  <div class="imagee-welcome">
+    <div class="image-welcome-paz">
+      <%= image_tag ("istisk.jpg") %>
+    </div>
+
+    <div class="image-welcome-paz">
+      <%= image_tag ("polit.jpg") %>
+    </div>
+
+    <div class="image-welcome-paz">
+      <%= image_tag ("econom.jpg") %>
+    </div>
+  </div>
+
+  <div class="opisanie-welcome">
+
+    <div class="opisanie-welcome-paz">
+      <h1>124 карточки</h1>
+      <h2>Важные события в Истории России, которые должен знать каждый</h2>
+    </div>
+
+    <div class="opisanie-welcome-paz">
+      <h1>73 карточки</h1>
+      <h2>Пополните свой словарный запас по английскому языку</h2>
+    </div>
+
+    <div class="opisanie-welcome-paz">
+      <h1>24 карточки</h1>
+      <h2>Ключевые произведения искусства 20 века</h2>
+    </div>
+
+  </div>
+
+  <div class="opisaniee-welcome">
+
+    <div class="opisanie-welcome-paz">
+      <h1>225 карточек</h1>
+      <h2>Общие знания о художественной культуре всех стран и всех времен </h2>
+    </div>
+
+    <div class="opisanie-welcome-paz">
+      <h1>45 карточек</h1>
+      <h2>Большое количество материала про политологию</h2>
+    </div>
+
+    <div class="opisanie-welcome-paz">
+      <h1>31 карточка</h1>
+      <h2>Термины курса микроэкономики из лекций профессоров НИУ ВШЭ</h2>
+    </div>
+
+  </div>
+
+  <div class="tema-welcome">
+    <% @topics.each do |topic| %>
+      <div class="tem-welcome">
+        <%= link_to topic, {:action => 'show', :id => topic.id} do -%>
+          <div class="otkr-welcome"><%= topic.title %></div>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="bolse-welcome">
+      <%= link_to topics_path do -%>
+        <div>Показать больше</div>
+        <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+      <% end %>
+    </div>
+  </div>
+
+</section>
+
+<section class="cards-welcome">
+
+  <div class="zagolovok-welcome">
+    <h1>Популярные карточки</h1>
+    <!-- <%= link_to new_card_path, remote: true do %>
+      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+    <% end %> -->
+  </div>
+
+  <div class="podzagolovok-welcome">
+    <h2>Вы можете создавать карточки с терминами по разным предметам <br> и регулярно проверять себя, постепенно осваивая материал.</h2>
+  </div>
+
+  <div class="card-welcome">
+    <% @cards.each do |card| %>
+      <div class="aa <%= 'withImage' if card.image.try(:url) %><%= 'withoutImage' unless card.image.try(:url) %>">
+
+        <%= link_to card, remote: true do %>
+          <div class="otkrcard"></div>
+        <% end %>
+
+        <div class="zatemnenie"></div>
+
+        <div class="imageniz"><%= image_tag card.image %></div>
+
+        <div class="quest"><%= card.question %></div>
+
+        <div class="answ"><%= card.answer %></div>
+
+        <div><%= card.memorization_level %></div>
+
+      </div>
+    <% end %>
+
+    <div class="bolse-welcome">
+      <%= link_to cards_path do -%>
+        <div>Показать больше</div>
+        <div><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/></div>
+      <% end %>
+    </div>
+  </div>
+
+</section>

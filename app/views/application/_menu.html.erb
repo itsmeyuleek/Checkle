@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
-  <%= link_to'Выйти', destroy_user_session_path, method: :delete, :class => "reg" %>
+  <%= link_to'Выйти', destroy_user_session_path, method: :delete, class: "reg" %>
 <% else %>
-  <%= link_to 'Войти', new_user_session_path, :class => "reg" %>
-  <%= link_to 'Зарегистрироваться', new_user_registration_path, :class => "reg" %>
+  <%= link_to 'Войти', new_user_session_path, class: "reg" %>
+  <%= link_to 'Зарегистрироваться', new_user_registration_path, class: "reg" %>
 <% end %>

@@ -1,71 +1,36 @@
-<section class="fader">
-  <section class="wrapper">
+<!-- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %> -->
+<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+<section class="fadershowcard">
+  <section class="close"></section>
+
+  <div class="redzagcard">
+    <div class="topiccard"><%= Topic.find(@card.topic_id).title %></div>
+    <%= link_to edit_card_path, :class => 'cnopcaredact', remote: true do %>
+      <div>Редактировать</div>
+    <% end %>
+  </div>
+
+  <div class="showcard_container">
 
     <section class="showcard <%= 'withImage' if @card.image.try(:url) %><%= 'withoutImage' unless @card.image.try(:url) %>">
-
-      <div class="close"><img src="https://i.ibb.co/N6bD89n/krest.png"/></div>
-      <!-- <img class="krest" src="images/krest.svg" > -->
-
-      <div class="topiccard"><%= Topic.find(@card.topic_id).title %></div>
-
-      <div class="one_side">
-        <div class="image_vnutri"><%= image_tag @card.image %></div>
-        <div class="side_vnutri"><%= @card.question %></div>
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <div class="one_side_flip">
+              <div class="image_vnutri"><%= image_tag @card.image %></div>
+              <div class="side_vnutri"><%= @card.question %></div>
+            </div>
+          </div>
+          <div class="back">
+            <div class="second_side_flip">
+              <div class="side_vnutriniz"><%= @card.answer %></div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="second_side">
-        <div class="side_vnutriniz"><%= @card.answer %></div>
-      </div>
-
     </section>
 
-    <!-- <p>
-    <strong>Question:</strong>
-    <%= @card.question %>
-  </p>
-
-  <p>
-  <strong>Answer:</strong>
-  <%= @card.answer %>
-</p>
-
-<p>
-<strong>Topic:</strong>
-<%#= @card.topic_id %>
-<%= Topic.find(@card.topic_id).title %>
-</p>
-
-<p>
-<strong>Image:</strong>
-<%= @card.image %>
-</p>
-
-<p>
-<strong>Memorization level:</strong>
-<%= @card.memorization_level %>
-</p> -->
-
-<div class="cnop">
-  <!-- <div class="cnopcanazad">
-    <div class="strelca">
-      <%= link_to cards_path do -%><img src="https://i.ibb.co/HB9KMMW/CNHTKRF-06.png"/><% end %>
-    </div>
-    <div class="nazadcard">Назад</div>
-  </div> -->
-
-  <div class="cnopca">
-
-    <%= link_to edit_card_path do %>
-    <div class="editcard">Редактировать</div>
-    <% end %>
-
   </div>
-</div>
-
-<!--
-<%= link_to 'Edit', edit_card_path(@card) %>
-<%= link_to 'Back', cards_path %> -->
-
-  </section>
 
 </section>

@@ -2,5 +2,5 @@ $('body').append('<%= j render partial: "cards/card_show", card: @card %>')
 $('body').addClass('popup')
 $('.close').on('click', function() {
   $('body').removeClass('popup')
-  $('.fader').remove()
+  $('.fadershowcard').remove()
 })

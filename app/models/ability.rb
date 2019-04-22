@@ -8,7 +8,7 @@ class Ability
 
     if user.present?
       can :read, Home
-      can :manage, [Topic, Card, Check], user_id: user.id
+      can :manage, [Topic, Card, Check, Home], user_id: user.id
       # can :manage, :all
       # can :manage, :all, user_id: user.id
     # Define abilities for the passed in user here. For example:
