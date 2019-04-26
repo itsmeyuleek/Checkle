@@ -6,7 +6,11 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = Topic.all
+    if current_user
+      @topics = current_user.topics
+    else
+      @topics = Topic.where(user_id: nil)
+    end
   end
 
   # GET /topics/1

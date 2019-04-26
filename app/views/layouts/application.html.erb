@@ -26,6 +26,13 @@
 
       <div class="menu">
 
+        <%= link_to welcome_discover_path, :class => "reg" do -%>
+          <div class="me">
+            <div class="icon"><%= image_tag ("poisk.png") %></div>
+            <h2 class="bar">Подборки</h2>
+          </div>
+        <% end %>
+
         <%= link_to topics_path, :class => "reg" do -%>
           <div class="me">
             <div class="icon"><img src="https://i.ibb.co/XjjBkrL/01.png"/></div>

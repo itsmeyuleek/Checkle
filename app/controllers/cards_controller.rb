@@ -6,7 +6,11 @@ class CardsController < ApplicationController
   # GET /cards
   # GET /cards.json
   def index
-    @cards = current_user.cards
+    if current_user
+      @cards = current_user.cards
+    else
+      @cards = Card.where(user_id: nil)
+    end
   end
 
   # GET /cards/1

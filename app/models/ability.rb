@@ -5,6 +5,7 @@ class Ability
     # can :new, User
     # can :all, :all
     # can :all, Welcome
+    can :read, [Topic, Card], user_id: nil
 
     if user.present?
       can :read, Home

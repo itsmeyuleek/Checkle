@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
   get 'home/index'
+  get 'welcome/discover'
 
   resources :checks
   resources :users
