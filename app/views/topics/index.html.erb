@@ -30,13 +30,13 @@
       <div class="b">
 
         <div class="redact">
-          <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
-            <%# <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/a23f3d48bf850c231b13b7fd88823411-full.png"/></div> %>
+          <!-- <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
+            <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/a23f3d48bf850c231b13b7fd88823411-full.png"/></div>
           <% end %>
 
           <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
-            <%# <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div> %>
-          <% end %>
+            <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/20/7c579154f2462203711b08f8f901f883-full.png"/></div>
+          <% end %> -->
         </div>
 
         <%= link_to topic, {:action => 'show', :id => topic.id} do -%>

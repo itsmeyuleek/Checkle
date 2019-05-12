@@ -57,19 +57,18 @@
           <div class="a">
 
             <div class="redact">
-              <%= link_to edit_topic_path(topic), {:action => 'edit', :id => topic.id} do -%>
-                <%# <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/41863166e7171859099e6e7175c4343c-full.png"/></div> %>
+              <!-- <%= link_to edit_topic_path(topic), remote: true do -%>
+                <div class="editt"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/41863166e7171859099e6e7175c4343c-full.png"/></div>
               <% end %>
 
               <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>
-                <%# <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/ef002b2b3b001d9cf2550f674cdbe3ec-full.png"/></div> %>
-              <% end %>
+                <div class="deletee"><img src="https://cdn1.savepice.ru/uploads/2018/12/21/ef002b2b3b001d9cf2550f674cdbe3ec-full.png"/></div>
+              <% end %> -->
             </div>
 
             <%= link_to topic, {:action => 'show', :id => topic.id} do -%>
               <div class="otkr"><%= topic.title %></div>
             <% end %>
-
           </div>
         <% end %>
 

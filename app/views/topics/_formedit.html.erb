@@ -1,7 +1,7 @@
 <section class="fader">
   <section class="wrappertemi">
     <div class="shownewtemi">
-      <div class="zagolovokk">Новая тема
+      <div class="zagolovokk">Редактирование
         <div class="close" id="closetem"><img src="https://i.ibb.co/N6bD89n/krest.png"/></div>
       </div>
 
@@ -37,7 +37,10 @@
         </div> -->
 
         <div class="nizsozd">
-          <div class="actions">
+          <%= link_to topic, method: :delete, :class => "deleteee", data: { confirm: 'Are you sure?' } do -%>
+            <div>Удалить тему</div>
+          <% end %>
+          <div class="actionss">
             <%= f.submit 'Сохранить', :class => 'sozdanie' %>
           </div>
         </div>
