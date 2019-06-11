@@ -14,6 +14,7 @@
   align-items: center;
   height: 85%;
   z-index: -2;
+  flex-direction: column;
 }
 
 .showcard{
@@ -48,6 +49,21 @@
   text-decoration: none;
   width: 120px;
   height: 34px;
+  border-radius: 5px;
+  // background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cnopcaotmena {
+  z-index: 1;
+  font-size: 14px;
+  font-family: 'Helvetica Neue';
+  // color: #3C3C3C;
+  color: white;
+  text-decoration: none;
+  height: 25px;
   border-radius: 5px;
   // background-color: white;
   display: flex;

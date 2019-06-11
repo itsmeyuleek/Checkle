@@ -1,8 +1,8 @@
 class WelcomeController < ApplicationController
 
   def index
-    @topics = Topic.all
-    @cards = Card.all
+    @topics = Topic.where(user_id: nil)
+    @cards = Card.where(user_id: nil)
   end
 
   def discover

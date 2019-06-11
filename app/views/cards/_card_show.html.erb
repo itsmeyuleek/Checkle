@@ -6,8 +6,11 @@
 
   <div class="redzagcard">
     <div class="topiccard"><%= Topic.find(@card.topic_id).title %></div>
-    <%= link_to edit_card_path, :class => 'cnopcaredact', remote: true do %>
-      <div>Редактировать</div>
+
+    <% if can? :edit, @card %>
+      <%= link_to edit_card_path, :class => 'cnopcaredact', remote: true do %>
+        <div>Редактировать</div>
+      <% end %>
     <% end %>
   </div>
 
@@ -30,6 +33,23 @@
         </div>
       </div>
     </section>
+
+    <div class="button">
+
+      <div class="prev_button">
+        <%= image_tag ("strelka.svg") %>
+      </div>
+
+      <div class="next_button">
+        <%= image_tag ("strelka.svg") %>
+      </div>
+
+    </div>
+
+    <div class="proverka">
+      <div class="znayu">Знаю</div>
+      <div class="neznayu">Не знаю</div>
+    </div>
 
   </div>
 

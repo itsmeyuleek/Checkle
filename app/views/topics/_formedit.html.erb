@@ -30,18 +30,31 @@
           </div>
         </div>
 
+        <div>
+          <div class="side_input_temi_opisanie">
+            <!-- <%= f.label :question %> -->
+            <%= f.text_field :description, placeholder: "Добавьте описание...", autocomplete: "off", :class => 'dobavtemiopisanie' %>
+          </div>
+        </div>
+
+        <div class="dobavlenieimage">
+          <%= f.label :image, "+ Добавить изображение" %>
+          <%= f.file_field :image %>
+        </div>
+
+
         <!-- <div class="fieldddd">
           <%= f.label :user_id, "Уровень сложности:" %>
           <%= f.number_field :user_id, current: :user_id, :class => 'sloznosti'%>
         </div> -->
 
         <div class="nizsozd">
-          <%= link_to topic, method: :delete, :class => "deleteee", data: { confirm: 'Are you sure?' } do -%>
-            <div>Удалить тему</div>
-          <% end %>
           <div class="actionss">
             <%= f.submit 'Сохранить', :class => 'sozdanie' %>
           </div>
+          <%= link_to topic, method: :delete, :class => "deleteee", data: { confirm: 'Are you sure?' } do -%>
+            <div>Удалить тему</div>
+          <% end %>
         </div>
 
         <!-- <%= link_to topic, method: :delete, data: { confirm: 'Are you sure?' } do -%>

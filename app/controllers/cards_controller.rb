@@ -32,14 +32,25 @@ class CardsController < ApplicationController
   def create
     @card = Card.new(card_params)
     @card.user_id = current_user.id
-    # @card = Card.new(add_user_id(card_params))
+    topic = Topic.find(params[:card][:topic_id])
+
+    # @card = Card.new(add_user_id(card_params)
+    #взять из параметров идентификатор id топика
+    #нйати топик по этому айди
+    # сравнить user_id топика с current_user id
+    # и если он совпадает, то выполнить сохранение
 
     respond_to do |format|
-      if @card.save
-        format.html { redirect_to cards_url }
-        format.json { render :show, status: :created, location: @card }
+      if topic.user_id == current_user.id
+        if @card.save
+          format.html { redirect_to cards_url }
+          format.json { render :show, status: :created, location: @card }
+        else
+          format.html { render :new }
+          format.json { render json: @card.errors, status: :unprocessable_entity }
+        end
       else
-        format.html { }
+        format.html { render :new }
         format.json { render json: @card.errors, status: :unprocessable_entity }
       end
     end

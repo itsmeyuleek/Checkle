@@ -115,7 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 1440px;
-  margin-top: 35px;
+  margin-top: 10px;
 }
 
 .car {
@@ -209,18 +209,18 @@ body {
   border-radius: 5px;
 }
 
-.b {
-  // position: absolute;
-  color: #3C3C3C;
-  background-color: white;
-  line-height: 18px;
-  width: 326px;
-  height: 190px;
-  margin-right: 30px;
-  margin-bottom: 25px;
-  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.03);
-  border-radius: 5px;
-}
+// .b {
+//   // position: absolute;
+//   color: #3C3C3C;
+//   background-color: white;
+//   line-height: 18px;
+//   width: 326px;
+//   height: 190px;
+//   margin-right: 30px;
+//   margin-bottom: 25px;
+//   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.03);
+//   border-radius: 5px;
+// }
 
 .pod {
   display: flex;
@@ -374,7 +374,7 @@ input {
 }
 
 .field {
-  margin-top: 65px;
+  // margin-top: 65px;
 }
 
 .fieldd {
@@ -392,12 +392,6 @@ input {
   margin-bottom: 30px;
 }
 
-.dobavtemi {
-  font-family: 'Helvetica Neue';
-  font-size: 18px;
-  text-align: left;
-}
-
 .sloznosti {
   margin-left: 10px;
   width: 60px;
@@ -413,6 +407,10 @@ input {
   cursor:pointer;
 }
 
+.dobavlenieimage {
+  margin-bottom: 30px;
+}
+
 .newcar {
   position: absolute;
   width: 232px;
@@ -426,16 +424,6 @@ input {
 .side_input {
   width: 300px;
   height: 220px;
-  text-align: center;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.side_input_temi {
-  width: 300px;
-  height: 210px;
   text-align: center;
   align-self: center;
   display: flex;
@@ -540,10 +528,24 @@ body.popup {
   z-index: 0;
 }
 
+.closeotmena {
+  z-index: 0;
+}
+
 #closetem {
   position: absolute;
   margin-left: 355px;
   margin-top: -24px;
+}
+
+.faderedit {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .fader {
@@ -553,7 +555,7 @@ body.popup {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -576,10 +578,15 @@ body.popup {
   }
 }
 
+.wwwrappersozd {
+  display: flex;
+  justify-content: center;
+}
+
 .wrappersozd {
   background-color: white;
   width: 500px;
-  height: 720px;
+  height: 725px;
   border-radius: 5px;
   z-index: 1;
   .showcard {
@@ -594,15 +601,21 @@ body.popup {
   }
 }
 
-.wrappertemi {
+.wrappersozdedit {
   background-color: white;
-  width: 450px;
-  height: 322px;
+  width: 500px;
+  height: 680px;
   border-radius: 5px;
   z-index: 1;
-  .shownewtemi {
+  margin-top: -30px;
+  .showcard {
     margin: 0;
-    width: 305px;
+    width: 348px;
+    margin-left: 72px;
+  }
+  .shownew {
+    margin: 0;
+    width: 348px;
     margin-left: 72px;
   }
 }

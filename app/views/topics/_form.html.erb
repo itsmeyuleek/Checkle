@@ -30,6 +30,22 @@
           </div>
         </div>
 
+        <figure class="linia"></figure>
+
+        <div>
+          <div class="side_input_temi_opisanie">
+            <!-- <%= f.label :question %> -->
+            <%= f.text_field :description, placeholder: "Добавьте описание...", autocomplete: "off", :class => 'dobavtemiopisanie' %>
+          </div>
+        </div>
+
+        <figure class="linia"></figure>
+
+        <div class="dobavlenieimage">
+          <%= f.label :image, "+ Добавить изображение" %>
+          <%= f.file_field :image %>
+        </div>
+
         <!-- <div class="fieldddd">
           <%= f.label :user_id, "Уровень сложности:" %>
           <%= f.number_field :user_id, current: :user_id, :class => 'sloznosti'%>

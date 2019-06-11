@@ -1,13 +1,13 @@
 <section class="fader">
   <section class="close"></section>
-  <section class="wrapper">
+  <section class="wrapper_reg">
 
     <h2>Вход</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
         <%= f.label :email, "Элетронная почта" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", %>
       </div>
 
       <div class="field">

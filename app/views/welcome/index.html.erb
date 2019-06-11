@@ -3,7 +3,6 @@
     <h1>Метод запоминания с помощью <br> флэш – карточек</h1>
     <h2>Мы лучше запоминаем информацию, если обращаемся <br> к ней несколько раз в течении длительного времени, <br> причем между повторениями необходимы интервалы. </h2>
   </div>
-
 </div>
 
 <div class="glavnaya-image-welcome">
@@ -23,82 +22,26 @@
     <h2>Мы собрали для вас готовые наборы карточек по разным темам, <br> вы можете просто добавить их в свой профиль.</h2>
   </div>
 
-  <div class="image-welcome">
-    <div class="image-welcome-paz">
-      <%= image_tag ("istross.jpg") %>
-    </div>
-
-    <div class="image-welcome-paz">
-      <%= image_tag ("angl.jpg") %>
-    </div>
-
-    <div class="image-welcome-paz">
-      <%= image_tag ("isk.jpg") %>
-    </div>
-  </div>
-
-  <div class="imagee-welcome">
-    <div class="image-welcome-paz">
-      <%= image_tag ("istisk.jpg") %>
-    </div>
-
-    <div class="image-welcome-paz">
-      <%= image_tag ("polit.jpg") %>
-    </div>
-
-    <div class="image-welcome-paz">
-      <%= image_tag ("econom.jpg") %>
-    </div>
-  </div>
-
-  <div class="opisanie-welcome">
-
-    <div class="opisanie-welcome-paz">
-      <h1>124 карточки</h1>
-      <h2>Важные события в Истории России, которые должен знать каждый</h2>
-    </div>
-
-    <div class="opisanie-welcome-paz">
-      <h1>73 карточки</h1>
-      <h2>Пополните свой словарный запас по английскому языку</h2>
-    </div>
-
-    <div class="opisanie-welcome-paz">
-      <h1>24 карточки</h1>
-      <h2>Ключевые произведения искусства 20 века</h2>
-    </div>
-
-  </div>
-
-  <div class="opisaniee-welcome">
-
-    <div class="opisanie-welcome-paz">
-      <h1>225 карточек</h1>
-      <h2>Общие знания о художественной культуре всех стран и всех времен </h2>
-    </div>
-
-    <div class="opisanie-welcome-paz">
-      <h1>45 карточек</h1>
-      <h2>Большое количество материала про политологию</h2>
-    </div>
-
-    <div class="opisanie-welcome-paz">
-      <h1>31 карточка</h1>
-      <h2>Термины курса микроэкономики из лекций профессоров НИУ ВШЭ</h2>
-    </div>
-
-  </div>
-
   <div class="tema-welcome">
     <% @topics.each do |topic| %>
-      <div class="tem-welcome">
-        <%= link_to topic, {:action => 'show', :id => topic.id} do %>
-          <div class="otkr-welcome"><%= topic.title %></div>
+      <section class="b <%= 'withImageTopic' if topic.image.try(:url) %><%= 'withoutImageTopic' unless topic.image.try(:url) %>">
+
+        <%= link_to topic, {:action => 'show', :id => topic.id} do -%>
+          <div class="otkritietemi"></div>
         <% end %>
 
-        <%= topic.cards.count %>
-        <%= Russian.p(topic.cards.count, "карточка", "карточки", "карточек") %>
-      </div>
+        <div class="zatemnenietemimini"></div>
+
+        <div class="imege_topic_niz"><%= image_tag topic.image %></div>
+
+        <div class="title_topic_niz"><%= topic.title %></div>
+
+        <div class="kolichestvo_topic_niz">
+          <%= topic.cards.count %>
+          <%= Russian.p(topic.cards.count, "карточка", "карточки", "карточек") %>
+        </div>
+
+      </section>
     <% end %>
     <div class="bolse-welcome">
       <%= link_to topics_path do -%>

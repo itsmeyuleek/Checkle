@@ -1,0 +1,57 @@
+.wrapper_reg {
+  margin-top: 130px;
+  width: 400px;
+}
+
+.fader_reg {
+  display: flex;
+  justify-content: center;
+}
+
+.zapomnit {
+  width: 15px;
+}
+
+.zapomnitt {
+  font-size: 14px;
+  color: rgb(72, 72, 72);
+}
+
+.voiti {
+  font-size: 16px;
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  background: #3C3C3C;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Helvetica Neue';
+}
+
+.pochta {
+  background-color: #FBFBFB;
+  border-color: #E6E7E8;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16px;
+  width: 400px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue';
+}
+
+.field_reg {
+  margin-top: 30px;
+}
+
+.actions_reg {
+  margin-top: 30px;
+}
+
+.regreg {
+  font-size: 32px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  color: #3C3C3C;
+}

@@ -1,20 +1,40 @@
+<section class="topics-verh <%= 'withImageTopic' if @topic.image.try(:url) %><%= 'withoutImageTopic' unless @topic.image.try(:url) %>">
 
-<section class="cardsshow">
+  <div class="zatemnenietemi"></div>
 
-  <div class="zagolovok">
-    <div class="redzag">
-      <%= @topic.title %>      
+  <div class="topics-verh-infa">
+
+    <div class="topics-verh-nazvanie">
+      <%= @topic.title %>
       <%= link_to edit_topic_path, remote: true do -%>
-      <div class="redtem"><img src="https://i.ibb.co/By70DBP/edit-icon-icons-com-61193.png"/></a></div>
+        <div class="topics-verh-redact"><%= image_tag ("redact.svg") %></div>
+        <div class="topics-verh-redactt"><%= image_tag ("red.svg") %></div>
       <% end %>
     </div>
 
+    <div class="topics-verh-opisanie">
+      <%= @topic.description %>
+    </div>
+
+  </div>
+
+  <div class="topics-verh-kolichestvo">
+    <%= @topic.cards.count %>
+    <%= Russian.p(@topic.cards.count, "карточка", "карточки", "карточек") %>
     <%= link_to new_card_path, remote: true do %>
-      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+      <div class="topics-verh-dobavlenie"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
     <% end %>
   </div>
 
-  <div class="podcard">
+  <div class="glavnaya-image-topics">
+    <%= image_tag @topic.image %>
+  </div>
+
+</section>
+
+<section class="cardsshow">
+
+  <div class="podcard_temi">
     <div class="cc"></div>
     <div class="cc"></div>
     <div class="cc"></div>
