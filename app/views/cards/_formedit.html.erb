@@ -46,12 +46,30 @@
               <!-- <%= f.label :question %> -->
               <%= f.text_field :question, placeholder: "Запишите вопрос...", autocomplete: "off" %>
             </div>
+
+            <div class="dobavlenieimage">
+              <%= f.label :image do %>
+                <%= image_tag ("pin.svg") %>
+              <% end %>
+              <%= f.file_field :image %>
+            </div>
+
           </div>
 
-          <div class="dobavlenieimage">
-            <%= f.label :image, "+ Добавить изображение" %>
-            <%= f.file_field :image %>
-          </div>
+          <!-- <%= form_for @card, html: { multipart: true } do |f| %>
+            <p>
+              <label>My image</label>
+              <%= image_tag(@card.image_url) if @card.image? %>
+              <%= f.file_field :image %>
+            </p>
+
+            <p>
+              <label>
+                <%= f.check_box :remove_image %>
+                Remove image
+              </label>
+            </p>
+          <% end %> -->
 
 
           <!-- <div class="fieldd">
@@ -72,12 +90,12 @@
           </div> -->
 
           <div class="nizsozd">
-            <%= link_to card, method: :delete, :class => "deleteee", data: { confirm: 'Are you sure?' } do -%>
-              <div>Удалить карточку</div>
-            <% end %>
             <div class="actionss">
               <%= f.submit 'Сохранить', :class => 'sozdanie' %>
             </div>
+            <%= link_to card, method: :delete, :class => "deleteee", data: { confirm: 'Are you sure?' } do -%>
+              <div>Удалить карточку</div>
+            <% end %>
           </div>
 
 

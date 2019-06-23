@@ -14,7 +14,7 @@
   <div class="zagolovok">
     <h1>Темы</h1>
     <%= link_to new_topic_path, remote: true do %>
-      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+      <div><%= image_tag ("plus.svg") %></div>
     <% end %>
   </div>
 
@@ -91,7 +91,7 @@
   <div class="zagolovok">
     <h1>Карточки</h1>
     <%= link_to new_card_path, remote: true do %>
-      <div><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+      <div><%= image_tag ("plus.svg") %></div>
     <% end %>
   </div>
 
@@ -108,6 +108,7 @@
         <!-- <%= link_to card, {:action => 'show', :id => card.id} do -%>
           <div class="otkrcard"></div>
         <% end %> -->
+
 
         <%= link_to card, remote: true do %>
           <div class="otkrcard"></div>

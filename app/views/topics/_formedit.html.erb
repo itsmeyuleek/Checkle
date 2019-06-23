@@ -30,11 +30,19 @@
             <%#= select("topic", "title", Topic.all.collect { |t| [t.title, t.id] }, { include_blank: true }) %>
           </div> -->
 
-          <div class="">
+          <div class="side_input_temi_verh">
             <div class="side_input_temi">
               <!-- <%= f.label :question %> -->
               <%= f.text_field :title, placeholder: "Добавьте название...", autocomplete: "off", :class => 'dobavtemi' %>
             </div>
+
+            <div class="dobavlenieimage-temi">
+              <%= f.label :image do %>
+                <%= image_tag ("pin.svg") %>
+              <% end %>
+              <%= f.file_field :image %>
+            </div>
+
           </div>
 
           <figure class="linia"></figure>
@@ -48,18 +56,12 @@
 
           <figure class="linia"></figure>
 
-          <div class="dobavlenieimage-temi">
-            <%= f.label :image, "+ Добавить изображение" %>
-            <%= f.file_field :image %>
-          </div>
-
-
           <!-- <div class="fieldddd">
             <%= f.label :user_id, "Уровень сложности:" %>
             <%= f.number_field :user_id, current: :user_id, :class => 'sloznosti'%>
           </div> -->
 
-          <div class="nizsozd">
+          <div class="nizsozd-temi">
             <div class="actionss">
               <%= f.submit 'Сохранить', :class => 'sozdanie' %>
             </div>

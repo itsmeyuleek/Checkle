@@ -66,7 +66,8 @@
   }
 
   .topics-verh-redact {
-    margin-left: 15px;
+    // margin-left: 15px;
+    margin-right: 5px;
     img {
       width: 30px;
       height: 30px;
@@ -82,11 +83,15 @@
     }
   }
 
-  .topics-verh-dobavlenie{
+  .topics-verh-dobavlenieee{
     img {
-      margin-top: -30px;
-      width: 55px;
+      margin-top: -10px;
+      width: 35px;
     }
+  }
+
+  .topics-verh-dobavlenie {
+   display: none;
   }
 
 }
@@ -168,10 +173,14 @@
     }
   }
 
+  .topics-verh-dobavlenieee {
+     display: none;
+  }
+
   .topics-verh-dobavlenie{
     img {
-      margin-top: -30px;
-      width: 55px;
+      margin-top: -5px;
+      width: 35px;
     }
   }
 
@@ -187,13 +196,13 @@
 }
 
 .side_input_temi {
-  width: 520px;
-  // height: 210px;
+  width: 495px;
   text-align: center;
   align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 15px;
 }
 
 .side_input_temi_opisanie {
@@ -225,7 +234,7 @@
 .wrappertemi {
   background-color: white;
   width: 670px;
-  height: 346px;
+  height: 322px;
   border-radius: 5px;
   margin-top: 120px;
   z-index: 1;
@@ -388,6 +397,13 @@
 }
 
 .dobavlenieimage-temi {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 65px;
+  img {
+    width: 20px;
+  }
+}
+
+.side_input_temi_verh {
+  display: flex;
+  flex-direction: row;
 }

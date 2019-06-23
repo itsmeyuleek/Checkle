@@ -47,13 +47,15 @@
               <!-- <%= f.label :question %> -->
               <%= f.text_field :question, placeholder: "Запишите вопрос...", autocomplete: "off" %>
             </div>
-          </div>
 
-          <div class="dobavlenieimage">
-            <%= f.label :image, "+ Добавить изображение" %>
-            <%= f.file_field :image %>
-          </div>
+            <div class="dobavlenieimage">
+              <%= f.label :image do %>
+                <%= image_tag ("pin.svg") %>
+              <% end %>
+              <%= f.file_field :image %>
+            </div>
 
+          </div>
 
           <!-- <div class="fieldd">
             <%= f.label :question %>

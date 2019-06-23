@@ -7,8 +7,8 @@
     <div class="topics-verh-nazvanie">
       <%= @topic.title %>
       <%= link_to edit_topic_path, remote: true do -%>
-        <div class="topics-verh-redact"><%= image_tag ("redact.svg") %></div>
-        <div class="topics-verh-redactt"><%= image_tag ("red.svg") %></div>
+        <div class="topics-verh-redact"><%= image_tag ("edit2.svg") %></div>
+        <div class="topics-verh-redactt"><%= image_tag ("edittt.svg") %></div>
       <% end %>
     </div>
 
@@ -22,7 +22,8 @@
     <%= @topic.cards.count %>
     <%= Russian.p(@topic.cards.count, "карточка", "карточки", "карточек") %>
     <%= link_to new_card_path, remote: true do %>
-      <div class="topics-verh-dobavlenie"><img src="https://i.ibb.co/7GDBYnB/image.png"/></a></div>
+      <div class="topics-verh-dobavlenie"><%= image_tag ("plus.svg") %></div>
+      <div class="topics-verh-dobavlenieee"><%= image_tag ("plus3.svg") %></div>
     <% end %>
   </div>
 

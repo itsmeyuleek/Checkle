@@ -52,9 +52,9 @@
 
     <div class="proverka">
       <% if can? :create, Attempt %>
+        <%= link_to "Знаю", attempts_url(attempt: {card_id: @card.id, result: true}), method: :post, remote: true, class: "znayu" %>
         <%= @card.attempts.where(user_id: current_user.id, result: true).count %>
         <%= @card.attempts.where(user_id: current_user.id, result: false).count %>
-        <%= link_to "Знаю", attempts_url(attempt: {card_id: @card.id, result: true}), method: :post, remote: true, class: "znayu" %>
         <%= link_to "Не знаю", attempts_url(attempt: {card_id: @card.id, result: false}), method: :post, remote: true, class: "znayu" %>
       <% else %>
         <%= link_to "Знаю", new_user_registration_path, class: "znayu" %>
