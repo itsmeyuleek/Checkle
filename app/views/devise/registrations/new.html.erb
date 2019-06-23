@@ -3,7 +3,7 @@
 <section class="fader_reg">
   <section class="wrapper_reg">
 
-    <h2 class="regreg">Регистрация</h2> 
+    <h2 class="regregreg">Регистрация</h2>
 
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
@@ -31,7 +31,15 @@
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <div class="reg-niz-niz">
+      <div class="ili"> Уже зарегистрированы?</div>
+
+      <%- if controller_name != 'sessions' %>
+        <%= link_to "Войти", new_session_path(resource_name), :class => 'zabili' %><br />
+      <% end -%>
+    </div>
+
+
 
   </section>
 </section>

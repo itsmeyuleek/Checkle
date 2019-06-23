@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .proverka {
+  position: relative;
+  z-index: 99;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -12,6 +14,7 @@
 
 
 .znayu {
+  text-decoration: none;
   width: 90px;
   height: 34px;
   background-color: white;
@@ -27,6 +30,7 @@
 }
 
 .neznayu {
+  text-decoration: none;
   width: 90px;
   height: 34px;
   background-color: white;
@@ -41,16 +45,18 @@
 
 }
 
-.prev_button img {
-  width: 30px;
-  height: 30px;
-  transform: rotate(180deg);
+.prev_button,
+.next_button {
+  display: block;
 
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
-.next_button img {
-  width: 30px;
-  height: 30px
+.prev_button img {
+  transform: rotate(180deg);
 }
 
 .button {
@@ -59,4 +65,5 @@
   flex-direction: row;
   justify-content: space-between;
   width: 650px;
+  margin-top: -30px;
 }

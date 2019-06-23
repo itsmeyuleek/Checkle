@@ -37,18 +37,29 @@
     <div class="button">
 
       <div class="prev_button">
-        <%= image_tag ("strelka.svg") %>
+        <%= link_to @card.prev, class: 'prev_button', remote: true do %>
+          <%= image_tag "strelka.svg" %>
+        <% end %>
       </div>
 
       <div class="next_button">
-        <%= image_tag ("strelka.svg") %>
+        <%= link_to @card.next, class: 'next_button', remote: true do %>
+          <%= image_tag ("strelka.svg") %>
+        <% end %>
       </div>
 
     </div>
 
     <div class="proverka">
-      <div class="znayu">Знаю</div>
-      <div class="neznayu">Не знаю</div>
+      <% if can? :create, Attempt %>
+        <%= @card.attempts.where(user_id: current_user.id, result: true).count %>
+        <%= @card.attempts.where(user_id: current_user.id, result: false).count %>
+        <%= link_to "Знаю", attempts_url(attempt: {card_id: @card.id, result: true}), method: :post, remote: true, class: "znayu" %>
+        <%= link_to "Не знаю", attempts_url(attempt: {card_id: @card.id, result: false}), method: :post, remote: true, class: "znayu" %>
+      <% else %>
+        <%= link_to "Знаю", new_user_registration_path, class: "znayu" %>
+        <%= link_to "Не знаю", new_user_registration_path, class: "znayu" %>
+      <% end %>
     </div>
 
   </div>

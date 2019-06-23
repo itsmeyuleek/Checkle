@@ -18,6 +18,7 @@ class CardsController < ApplicationController
   def show
   end
 
+
   # GET /cards/new
   def new
     @card = Card.new

@@ -2,7 +2,7 @@ body {
 
 .reg {
   font-size: 13px;
-  color: black;
+  color: #FF4D4D;
   text-decoration: none;
   margin-left: 40px;
 }
@@ -556,9 +556,9 @@ body.popup {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.85);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
 
   .wrapper {
     background-color: white;

@@ -27,6 +27,7 @@ class AttemptsController < ApplicationController
   # POST /attempts.json
   def create
     @attempt = Attempt.new(attempt_params)
+    @attempt.user = current_user
 
     respond_to do |format|
       if @attempt.save

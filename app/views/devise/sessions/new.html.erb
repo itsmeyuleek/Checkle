@@ -1,7 +1,7 @@
 <section class="fader_reg">
   <section class="wrapper_reg">
 
-    <h2 class="regreg">Уже зарегистрированы?</h2> 
+    <h2 class="regregreg">Уже зарегистрированы?</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field_reg">
@@ -14,19 +14,34 @@
         <%= f.password_field :password, autocomplete: "off", placeholder: "Пароль", :class => 'pochta' %>
       </div>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="field_reg">
-          <%= f.check_box :remember_me, :class => 'zapomnit' %>
-          <%= f.label :remember_me, "Запомнить меня", :class => 'zapomnitt' %>
-        </div>
-      <% end -%>
+      <div class="reg-niz">
+        <% if devise_mapping.rememberable? -%>
+          <div class="field_reg_reg">
+            <%= f.check_box :remember_me, :class => 'zapomnit' %>
+            <%= f.label :remember_me, "Запомнить меня", :class => 'zapomnitt' %>
+          </div>
+        <% end -%>
+
+        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+          <div class="field_reg_reg">
+            <%= link_to "Забыли пароль?", new_password_path(resource_name), :class => 'zabili' %><br />
+          </div>
+        <% end -%>
+
+      </div>
 
       <div class="actions_reg">
         <%= f.submit "Войти", :class => 'voiti' %>
       </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
+
+
+    <!-- <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <div class="field_reg_reg">
+        <%= link_to "Не зарегистрированы? Зарегистрируйтесь!", new_registration_path(resource_name), :class => 'zabili' %><br />
+      </div>
+    <% end -%> -->
 
   </section>
 </section>

@@ -21,38 +21,38 @@
     <nav class="menubar">
 
       <%= link_to home_index_path do -%>
-        <div class="logo"><img src="https://i.ibb.co/Q6DFqPx/05.png"/></div>
+        <div class="logo"><%= image_tag ("logo.svg") %></div>
       <% end %>
 
       <div class="menu">
 
         <%= link_to welcome_discover_path, :class => "reg" do -%>
           <div class="me">
-            <div class="icon"><%= image_tag ("poisk.png") %></div>
+            <div class="icon"><%= image_tag ("search.svg") %></div>
             <h2 class="bar">Подборки</h2>
           </div>
         <% end %>
 
         <%= link_to topics_path, :class => "reg" do -%>
           <div class="me">
-            <div class="icon"><img src="https://i.ibb.co/XjjBkrL/01.png"/></div>
+            <div class="icon"><%= image_tag ("topic.svg") %></div>
             <h2 class="bar">Темы</h2>
           </div>
         <% end %>
 
         <%= link_to cards_path, :class => "reg" do -%>
           <div class="me">
-            <div class="icon"><img src="https://i.ibb.co/QDhDRx1/02.png"/></div>
+            <div class="icon"><%= image_tag ("profile.svg") %></div>
             <h2 class="bar">Карточки</h2>
           </div>
         <% end %>
 
-        <%= link_to checks_path, :class => "reg" do -%>
+        <!-- <%= link_to checks_path, :class => "reg" do -%>
           <div class="me">
             <div class="icon"><img src="https://i.ibb.co/6mHJT0y/03.png"/></div>
             <h2 class="bar">Проверки</h2>
           </div>
-        <% end %>
+        <% end %> -->
 
         <!-- <a class="me" href="">
           <div class="ava"><img src="https://i.ibb.co/VqVjFcB/04.png"/></div>
@@ -64,7 +64,7 @@
        <a href="/users/sign_up">Регистрация</a>
        <a href="/users/sign_in">Вход</a>
      </div> -->
-    </nav>
+      </div>
 
       <!-- <div>
        <% if user_signed_in? %>
