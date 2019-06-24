@@ -16,7 +16,7 @@
 
   <div class="showcard_container">
 
-    <section class="showcard <%= 'withImage' if @card.image.try(:url) %><%= 'withoutImage' unless @card.image.try(:url) %>">
+    <section class="showcard <%= 'withImage-show' if @card.image.try(:url) %><%= 'withoutImage-show' unless @card.image.try(:url) %>">
       <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
         <div class="flipper">
           <div class="front">

@@ -40,7 +40,7 @@ class TopicsController < ApplicationController
         format.html { redirect_to topics_url }
         format.json { render :show, status: :created, location: @topic }
       else
-        format.html { }
+        format.html { render :new }
         format.json { render json: @topic.errors, status: :unprocessable_entity }
       end
     end

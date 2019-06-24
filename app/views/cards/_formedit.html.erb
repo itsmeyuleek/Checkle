@@ -34,7 +34,7 @@
             <div class="vibortemi">
               <!-- <%= f.label :topic_id %> -->
               <%#= f.number_field :topic_id %>
-              <%= select("card", "topic_id", Topic.all.collect { |t| [t.title, t.id] }, {:include_blank => 'Выбрать тему'}) %>
+              <%= select("card", "topic_id", Topic.all.collect { |t| [t.title, t.id] }, {:include_blank => 'Выбрать тему'}, :class => 'SELECT') %>
             </div>
 
           </div>

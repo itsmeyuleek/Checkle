@@ -176,7 +176,7 @@
   align-items: center;
 }
 
-.withoutImage{
+.withoutImage-show{
   color: black;
   .image_vnutri {
     position: absolute;
@@ -249,4 +249,19 @@
   img {
     width: 20px;
   }
+}
+
+.SELECT {
+  background-color: white;
+  width: 350px;
+  height: 30px;
+  outline: none;
+  text-align: center;
+  font-size: 13px;
+  color: #3C3C3C;
+  border-color: #E6E7E8;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: 'Helvetica Neue';
 }
