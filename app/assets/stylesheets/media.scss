@@ -80,6 +80,9 @@
     height: 68px;
     background-color: white;
     color: #3C3C3C;
+    // background-color: #8EC74E;
+    // color: #FF4D4D;
+    // color: white;
     font-family: 'Helvetica Neue';
     cursor: pointer;
     font-size: 30px;
@@ -94,8 +97,10 @@
     text-decoration: none;
     width: 180px;
     height: 68px;
-    background-color: white;
-    color: #3C3C3C;
+    // background-color: white;
+    background-color: #FF4D4D;
+    // color: #3C3C3C;
+    color: white;
     font-family: 'Helvetica Neue';
     cursor: pointer;
     font-size: 30px;
@@ -1834,6 +1839,40 @@
     cursor: pointer;
     font-family: 'Helvetica Neue';
   }
+
+  .attempt_show {
+    display: flex;
+    font-size: 46px;
+    font-family: 'Helvetica Neue';
+    color: white;
+    // color: white;
+    font-weight: 700;
+    align-items: center;
+  }
+
+  .attempt_show_a {
+    display: flex;
+    font-size: 46px;
+    font-family: 'Helvetica Neue';
+    // color: #8EC74E;
+    // color: #FF4D4D;
+    color: white;
+    font-weight: 700;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  .attempt_show_b {
+    display: flex;
+    font-size: 46px;
+    font-family: 'Helvetica Neue';
+    color: #FF4D4D;
+    // color: white;
+    font-weight: 700;
+    align-items: center;
+    margin-left: 20px;
+  }
+
 
 
 }
