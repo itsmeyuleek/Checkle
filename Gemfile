@@ -38,7 +38,7 @@ gem 'in_place_editing'
 
 gem "select2-rails"
 
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'devise'
 gem 'cancancan', '~> 2.0'
 gem 'compass-rails', github: 'Compass/compass-rails'
